@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[93108,["/CinematicUniverses/_next/static/chunks/c7066a02cc43f9ed.js","/CinematicUniverses/_next/static/chunks/2888d7462ab93f61.js"],"OutletBoundary"]
+3:"$Sreact.suspense"
+0:{"buildId":"bjrbtohwuy_zGdPyPrVql","rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","h1",null,{"children":"Phase 3"}],["$","p",null,{"children":"MCU Phase 3 films and events."}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
+4:null

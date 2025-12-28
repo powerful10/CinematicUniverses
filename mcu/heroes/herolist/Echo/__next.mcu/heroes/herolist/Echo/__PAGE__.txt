@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[36191,["/CinematicUniverses/_next/static/chunks/bda8e96cf4b272ec.js"],""]
+3:I[93108,["/CinematicUniverses/_next/static/chunks/c7066a02cc43f9ed.js","/CinematicUniverses/_next/static/chunks/2888d7462ab93f61.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"bjrbtohwuy_zGdPyPrVql","rsc":["$","$1","c",{"children":[["$","main",null,{"className":"p-8","children":[["$","h1",null,{"className":"text-2xl font-bold","children":"Echo"}],["$","p",null,{"children":"Hero page for Echo (Maya Lopez)."}],["$","p",null,{"className":"mt-4","children":["$","$L2",null,{"href":"/mcu/heroes","children":"← Back to Heroes"}]}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null

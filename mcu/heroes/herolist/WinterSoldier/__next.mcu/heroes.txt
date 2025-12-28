@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[68238,["/CinematicUniverses/_next/static/chunks/bda8e96cf4b272ec.js"],"default"]
+3:I[32295,["/CinematicUniverses/_next/static/chunks/c7066a02cc43f9ed.js","/CinematicUniverses/_next/static/chunks/2888d7462ab93f61.js"],"default"]
+4:I[6631,["/CinematicUniverses/_next/static/chunks/c7066a02cc43f9ed.js","/CinematicUniverses/_next/static/chunks/2888d7462ab93f61.js"],"default"]
+0:{"buildId":"bjrbtohwuy_zGdPyPrVql","rsc":["$","$1","c",{"children":[[["$","script","script-0",{"src":"/CinematicUniverses/_next/static/chunks/bda8e96cf4b272ec.js","async":true}]],["$","div",null,{"className":"flex min-h-screen","children":[["$","div",null,{"className":"w-64 sticky top-0 h-screen","children":["$","$L2",null,{}]}],["$","div",null,{"className":"flex-1 p-6","children":["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]}]]}]]}],"loading":null,"isPartial":false}
