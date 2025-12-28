@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
+const repoName = 'CinematicUniverses';
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export',
+  basePath: `/${repoName}`,
+  assetPrefix: `/${repoName}`,
+  images: { unoptimized: true },
   reactCompiler: true,
 };
 
