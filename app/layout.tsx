@@ -1,7 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cinzel, Source_Sans_3 } from "next/font/google";
 
 import MainNav from "@/app/components/navigation/MainNav";
+import { withBasePath } from "@/app/lib/basePath";
+import { absoluteAssetUrl, absoluteUrl, getSiteUrl } from "@/app/lib/seo";
 
 import "./globals.css";
 
@@ -18,8 +20,67 @@ const body = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Cinematic Universes",
+  metadataBase: new URL(getSiteUrl()),
+  title: {
+    default: "Cinematic Universes | MCU and DC Encyclopedia",
+    template: "%s | Cinematic Universes",
+  },
   description: "A complete MCU and DC encyclopedia of heroes, villains, antiheroes, teams, and timelines.",
+  applicationName: "Cinematic Universes",
+  keywords: [
+    "MCU characters",
+    "DC characters",
+    "Marvel heroes",
+    "DC villains",
+    "comic character encyclopedia",
+    "cinematic universe guide",
+  ],
+  alternates: {
+    canonical: absoluteUrl("/"),
+  },
+  openGraph: {
+    type: "website",
+    title: "Cinematic Universes | MCU and DC Encyclopedia",
+    description: "A complete MCU and DC encyclopedia of heroes, villains, antiheroes, teams, and timelines.",
+    url: absoluteUrl("/"),
+    siteName: "Cinematic Universes",
+    images: [
+      {
+        url: absoluteAssetUrl("/favicon.png"),
+        alt: "Cinematic Universes logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cinematic Universes | MCU and DC Encyclopedia",
+    description: "A complete MCU and DC encyclopedia of heroes, villains, antiheroes, teams, and timelines.",
+    images: [absoluteAssetUrl("/favicon.png")],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  manifest: withBasePath("/manifest.webmanifest"),
+  icons: {
+    icon: [{ url: withBasePath("/favicon.png") }],
+    apple: [{ url: withBasePath("/favicon.png") }],
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#060a12",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

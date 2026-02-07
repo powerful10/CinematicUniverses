@@ -10,6 +10,8 @@ A Next.js static encyclopedia for MCU and DC characters, teams, timelines, and w
 - Coverage dashboard at `/coverage`
 - Local media library in `public/media`
 - Data pipeline + validation scripts for future updates
+- Mobile-first navigation and collapsible sidebars for easier small-screen browsing
+- SEO upgrades: canonical metadata, OpenGraph/Twitter cards, sitemap, robots, manifest, and JSON-LD
 
 ## Local development
 
@@ -47,6 +49,7 @@ npm run quality
 - Connect repo in Vercel
 - Production deploy runs on every push to `main`
 - Base path is root (`/`) on Vercel
+- Set `NEXT_PUBLIC_SITE_URL` in Vercel to your production domain for canonical URLs
 
 ### GitHub Pages
 
@@ -82,3 +85,7 @@ git push origin main
 - `scripts/validate-dataset.mjs` - dataset integrity checks
 - `app/components/characters/*` - shared directory/profile UI
 - `app/coverage/page.tsx` - roster coverage and scope dashboard
+- `app/sitemap.ts` - generated sitemap metadata route
+- `app/robots.ts` - robots metadata route
+- `app/manifest.ts` - PWA-style web manifest
+- `app/lib/seo.ts` - URL/canonical/asset SEO helpers

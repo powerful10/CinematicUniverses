@@ -1,6 +1,15 @@
-﻿import Link from "next/link";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 import { charactersUpdatedAt, getUniverseBreakdown, getUniverseCharacterCount } from "@/app/data/characters";
+import { buildPageMetadata } from "@/app/lib/pageMetadata";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Coverage Dashboard",
+  description: "See MCU and DC roster counts, dataset build timestamp, and scope notes for indexed character coverage.",
+  path: "/coverage",
+  keywords: ["MCU roster count", "DC roster count", "character coverage dashboard"],
+});
 
 const scopeNotes = [
   "Primary focus is MCU and DC cinematic continuity with high-impact adjacent characters users commonly expect.",
@@ -79,3 +88,4 @@ export default function CoveragePage() {
     </main>
   );
 }
+

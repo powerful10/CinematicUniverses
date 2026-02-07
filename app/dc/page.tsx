@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import CharacterCard from "@/app/components/characters/CharacterCard";
 import { getFeaturedCharacters } from "@/app/data/characters";
+import { buildPageMetadata } from "@/app/lib/pageMetadata";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "DC Universe Hub",
+  description: "Explore DC heroes, villains, antiheroes, Justice League, and Suicide Squad pages from one command hub.",
+  path: "/dc",
+  keywords: ["DC Universe hub", "DC character profiles", "Justice League roster", "DC villains directory"],
+});
 
 const dcRouteCards = [
   { href: "/dc/heroes", title: "Heroes", detail: "League leaders, city defenders, and metahuman icons." },

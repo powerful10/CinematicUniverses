@@ -42,6 +42,8 @@ export default function CharacterDirectoryClient({ title, characters }: Director
   const [query, setQuery] = useState("");
   const [sortMode, setSortMode] = useState<SortMode>("az");
 
+  const hasCustomFilters = query.trim().length > 0 || sortMode !== "az";
+
   const visibleCharacters = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
     let filtered = characters;
@@ -90,7 +92,23 @@ export default function CharacterDirectoryClient({ title, characters }: Director
           </select>
         </div>
 
-        <p className="directory-toolbar-count">Showing {visibleCharacters.length} of {characters.length}</p>
+        <p className="directory-toolbar-count" aria-live="polite">
+          Showing {visibleCharacters.length} of {characters.length}
+        </p>
+
+        <div className="directory-toolbar-actions">
+          <button
+            type="button"
+            className="directory-reset"
+            onClick={() => {
+              setQuery("");
+              setSortMode("az");
+            }}
+            disabled={!hasCustomFilters}
+          >
+            Reset Filters
+          </button>
+        </div>
       </section>
 
       {visibleCharacters.length ? (

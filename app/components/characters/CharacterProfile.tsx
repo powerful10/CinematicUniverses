@@ -2,8 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 import type { CharacterRecord, Faction, Universe } from "@/app/data/characters";
-import { factionLabel } from "@/app/data/characters";
+import { factionLabel, getCharacterRoute } from "@/app/data/characters";
 import { withBasePath } from "@/app/lib/basePath";
+import { absoluteAssetUrl, absoluteUrl } from "@/app/lib/seo";
 
 type CharacterProfileProps = {
   character: CharacterRecord;
@@ -66,9 +67,33 @@ function buildSummaryParagraphs(summary: string): string[] {
 export default function CharacterProfile({ character }: CharacterProfileProps) {
   const categoryRoute = getCategoryRoute(character.universe, character.faction);
   const summaryParagraphs = buildSummaryParagraphs(character.summary);
+  const profileSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    name: `${character.name} profile`,
+    description: character.summary,
+    url: absoluteUrl(getCharacterRoute(character)),
+    mainEntity: {
+      "@type": "Person",
+      additionalType: "https://schema.org/FictionalCharacter",
+      name: character.name,
+      alternateName: character.alias || undefined,
+      description: character.summary,
+      image: absoluteAssetUrl(character.image),
+      affiliation: trimList(character.affiliations).map((name) => ({ "@type": "Organization", name })),
+      sameAs: character.sourceUrl ? [character.sourceUrl] : undefined,
+    },
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Cinematic Universes",
+      url: absoluteUrl("/"),
+    },
+  };
 
   return (
     <main className="character-profile">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema) }} />
+
       <div className="profile-banner section-surface">
         <div className="profile-media-frame">
           <Image
@@ -87,8 +112,8 @@ export default function CharacterProfile({ character }: CharacterProfileProps) {
           <h1>{character.name}</h1>
           {character.alias ? <p className="profile-alias">Also known as {character.alias}</p> : null}
           <div className="profile-summary-stack">
-            {summaryParagraphs.map((paragraph) => (
-              <p key={paragraph} className="profile-summary">
+            {summaryParagraphs.map((paragraph, index) => (
+              <p key={`${character.id}-summary-${index}`} className="profile-summary">
                 {paragraph}
               </p>
             ))}

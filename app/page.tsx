@@ -1,14 +1,38 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import CharacterCard from "@/app/components/characters/CharacterCard";
 import { getFeaturedCharacters, getUniverseCharacterCount } from "@/app/data/characters";
+import { buildPageMetadata } from "@/app/lib/pageMetadata";
+import { absoluteUrl } from "@/app/lib/seo";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "MCU and DC Encyclopedia",
+  description: "Explore MCU and DC heroes, villains, and antiheroes with searchable profiles and timeline context.",
+  path: "/",
+  keywords: ["MCU encyclopedia", "DC encyclopedia", "Marvel character profiles", "DC character database"],
+});
 
 export default function HomePage() {
   const mcuFeatured = getFeaturedCharacters("mcu", 6);
   const dcFeatured = getFeaturedCharacters("dc", 6);
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Cinematic Universes",
+    url: absoluteUrl("/"),
+    description: "A complete MCU and DC encyclopedia with searchable character directories and profile pages.",
+    inLanguage: "en-US",
+    publisher: {
+      "@type": "Organization",
+      name: "Cinematic Universes",
+    },
+  };
 
   return (
     <main className="home-page">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+
       <section className="hero-spotlight section-surface">
         <p className="eyebrow">Multiverse Archive</p>
         <h1>Step Into the Cinematic Universes</h1>

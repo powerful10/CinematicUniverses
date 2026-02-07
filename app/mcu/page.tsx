@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import CharacterCard from "@/app/components/characters/CharacterCard";
 import { getFeaturedCharacters } from "@/app/data/characters";
+import { buildPageMetadata } from "@/app/lib/pageMetadata";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "MCU Universe Hub",
+  description: "Browse MCU heroes, villains, antiheroes, phases, artifacts, and timeline pages in one structured hub.",
+  path: "/mcu",
+  keywords: ["MCU hub", "Marvel Cinematic Universe characters", "MCU timeline", "MCU phases"],
+});
 
 const mcuRouteCards = [
   { href: "/mcu/heroes", title: "Heroes", detail: "Full roster and detailed profiles." },
