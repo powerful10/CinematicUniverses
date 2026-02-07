@@ -1,10 +1,17 @@
+﻿import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import CharacterProfile from "@/app/components/characters/CharacterProfile";
 import { getCharacterById, getCharacters } from "@/app/data/characters";
+import { buildCharacterMetadata } from "@/app/lib/characterMetadata";
 
 export function generateStaticParams() {
   return getCharacters("mcu", "heroes").map((character) => ({ heroId: character.id }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ heroId: string }> }): Promise<Metadata> {
+  const { heroId } = await params;
+  return buildCharacterMetadata("mcu", "heroes", heroId);
 }
 
 export default async function MCUHeroProfilePage({ params }: { params: Promise<{ heroId: string }> }) {

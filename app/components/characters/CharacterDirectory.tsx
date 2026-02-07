@@ -1,5 +1,5 @@
 import type { CharacterRecord } from "@/app/data/characters";
-import CharacterCard from "@/app/components/characters/CharacterCard";
+import CharacterDirectoryClient from "@/app/components/characters/CharacterDirectoryClient";
 
 type CharacterDirectoryProps = {
   title: string;
@@ -15,12 +15,7 @@ export default function CharacterDirectory({ title, description, characters }: C
         <h1>{title}</h1>
         <p>{description}</p>
       </section>
-
-      <section className="character-grid" aria-label={title}>
-        {characters.map((character) => (
-          <CharacterCard key={`${character.universe}-${character.faction}-${character.id}`} character={character} />
-        ))}
-      </section>
+      <CharacterDirectoryClient title={title} characters={characters} />
     </main>
   );
 }

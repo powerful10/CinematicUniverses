@@ -32,6 +32,8 @@ export type CharacterRecord = {
   image: string;
   imageSource: string;
   sourceUrl: string | null;
+  sourceTitle?: string | null;
+  sourceDescription?: string | null;
 };
 
 type UniverseData = {
@@ -72,6 +74,14 @@ export function getUniverseCharacterCount(universe: Universe): number {
     dataset.universes[universe].villains.length +
     dataset.universes[universe].antiheroes.length
   );
+}
+
+export function getUniverseBreakdown(universe: Universe): Record<Faction, number> {
+  return {
+    heroes: dataset.universes[universe].heroes.length,
+    villains: dataset.universes[universe].villains.length,
+    antiheroes: dataset.universes[universe].antiheroes.length,
+  };
 }
 
 export function getFeaturedCharacters(universe: Universe, limit = 6): CharacterRecord[] {

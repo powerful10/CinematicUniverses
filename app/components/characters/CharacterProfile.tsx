@@ -47,8 +47,25 @@ function trimList(values: string[]): string[] {
   return values.filter(Boolean).slice(0, 6);
 }
 
+function buildSummaryParagraphs(summary: string): string[] {
+  const sentences = summary
+    .replace(/\s+/g, " ")
+    .split(/(?<=[.!?])\s+/)
+    .map((entry) => entry.trim())
+    .filter(Boolean);
+
+  if (sentences.length <= 2) {
+    return [summary];
+  }
+
+  const first = sentences.slice(0, Math.ceil(sentences.length / 2)).join(" ");
+  const second = sentences.slice(Math.ceil(sentences.length / 2)).join(" ");
+  return [first, second];
+}
+
 export default function CharacterProfile({ character }: CharacterProfileProps) {
   const categoryRoute = getCategoryRoute(character.universe, character.faction);
+  const summaryParagraphs = buildSummaryParagraphs(character.summary);
 
   return (
     <main className="character-profile">
@@ -69,7 +86,13 @@ export default function CharacterProfile({ character }: CharacterProfileProps) {
           </p>
           <h1>{character.name}</h1>
           {character.alias ? <p className="profile-alias">Also known as {character.alias}</p> : null}
-          <p className="profile-summary">{character.summary}</p>
+          <div className="profile-summary-stack">
+            {summaryParagraphs.map((paragraph) => (
+              <p key={paragraph} className="profile-summary">
+                {paragraph}
+              </p>
+            ))}
+          </div>
 
           <div className="profile-banner-links">
             <Link href={categoryRoute} className="pill-link">
@@ -164,6 +187,30 @@ export default function CharacterProfile({ character }: CharacterProfileProps) {
           ) : (
             <p className="muted-copy">No structured stat profile is currently available.</p>
           )}
+        </article>
+
+        <article className="section-surface">
+          <h2>Sources</h2>
+          <dl className="profile-data-grid">
+            <div>
+              <dt>Image Source</dt>
+              <dd>{character.imageSource}</dd>
+            </div>
+            <div>
+              <dt>Profile Source</dt>
+              <dd>{character.sourceTitle || "Compiled reference data"}</dd>
+            </div>
+          </dl>
+
+          {character.sourceDescription ? <p className="muted-copy source-desc">{character.sourceDescription}</p> : null}
+
+          {character.sourceUrl ? (
+            <p className="source-link-wrap">
+              <a href={character.sourceUrl} target="_blank" rel="noopener noreferrer" className="source-link">
+                Open source reference
+              </a>
+            </p>
+          ) : null}
         </article>
       </section>
     </main>

@@ -11,6 +11,7 @@ const links = [
   { href: "/mcu/villains", label: "MCU Villains" },
   { href: "/dc/heroes", label: "DC Heroes" },
   { href: "/dc/villains", label: "DC Villains" },
+  { href: "/coverage", label: "Coverage" },
 ];
 
 function isRouteActive(pathname: string, href: string): boolean {
