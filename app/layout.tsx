@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "googlec865f91c502bf241",
     other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
       ? {
           "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION,
