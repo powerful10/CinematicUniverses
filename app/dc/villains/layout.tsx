@@ -1,6 +1,6 @@
-// app/dc/villains/layout.tsx
-import React from "react";
+import DCVillainSidebar from "@/app/components/dcsidebar/DCVillainSidebar";
+import SidebarLayout from "@/app/components/layout/SidebarLayout";
 
 export default function DCVillainsLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return <SidebarLayout sidebar={<DCVillainSidebar />}>{children}</SidebarLayout>;
 }

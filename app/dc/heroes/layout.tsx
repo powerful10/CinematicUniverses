@@ -1,6 +1,6 @@
-// app/dc/heroes/layout.tsx
-import React from "react";
+import DCHeroSidebar from "@/app/components/dcsidebar/DCHeroSidebar";
+import SidebarLayout from "@/app/components/layout/SidebarLayout";
 
 export default function DCHeroesLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>; // minimal wrapper
+  return <SidebarLayout sidebar={<DCHeroSidebar />}>{children}</SidebarLayout>;
 }

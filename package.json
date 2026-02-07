@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:gh": "set DEPLOY_TARGET=gh-pages&& next build",
     "start": "next start",
     "lint": "eslint",
-    "predeploy": "next build",
+    "predeploy": "npm run build:gh",
     "deploy": "gh-pages -d out"
   },
   "dependencies": {

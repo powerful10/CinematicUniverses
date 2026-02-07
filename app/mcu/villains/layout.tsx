@@ -1,17 +1,6 @@
 import VillainSidebar from "@/app/components/mcusidebar/VillainSidebar";
+import SidebarLayout from "@/app/components/layout/SidebarLayout";
 
-export default function HeroesLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="flex min-h-screen">
-      {/* Fixed Sidebar */}
-      <div className="w-64 sticky top-0 h-screen">
-        <VillainSidebar />
-      </div>
-
-      {/* Main content */}
-      <div className="flex-1 p-6">
-        {children}
-      </div>
-    </div>
-  );
+export default function VillainsLayout({ children }: { children: React.ReactNode }) {
+  return <SidebarLayout sidebar={<VillainSidebar />}>{children}</SidebarLayout>;
 }
