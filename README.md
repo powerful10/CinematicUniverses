@@ -12,6 +12,8 @@ A Next.js static encyclopedia for MCU and DC characters, teams, timelines, and w
 - Data pipeline + validation scripts for future updates
 - Mobile-first navigation and collapsible sidebars for easier small-screen browsing
 - SEO upgrades: canonical metadata, OpenGraph/Twitter cards, sitemap, robots, manifest, and JSON-LD
+- Trust/monetization pages: `/about`, `/contact`, `/privacy`, `/terms`, `/monetization`
+- Security hardening on Vercel via `vercel.json` response headers
 
 ## Local development
 
@@ -89,3 +91,4 @@ git push origin main
 - `app/robots.ts` - robots metadata route
 - `app/manifest.ts` - PWA-style web manifest
 - `app/lib/seo.ts` - URL/canonical/asset SEO helpers
+- `vercel.json` - Vercel security headers and caching policy

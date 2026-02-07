@@ -169,6 +169,26 @@ a {
   font-size: 0.92rem;
 }
 
+.site-footer-links {
+  margin-top: 0.65rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.site-footer-links a {
+  text-decoration: none;
+  font-size: 0.82rem;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 999px;
+  padding: 0.27rem 0.56rem;
+  color: #d9e7ff;
+}
+
+.site-footer-links a:hover {
+  border-color: rgba(56, 189, 248, 0.72);
+}
+
 .site-footer-meta {
   color: rgba(184, 205, 242, 0.72);
   white-space: nowrap;
@@ -701,6 +721,24 @@ a {
 
 .source-link:hover {
   color: #b7ecff;
+}
+
+.policy-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.policy-copy {
+  line-height: 1.5;
+}
+
+.policy-meta {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.contact-card strong {
+  color: #ffffff;
 }
 
 .timeline-stack {

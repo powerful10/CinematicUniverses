@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cinzel, Source_Sans_3 } from "next/font/google";
+import Link from "next/link";
 
 import MainNav from "@/app/components/navigation/MainNav";
 import { withBasePath } from "@/app/lib/basePath";
@@ -104,6 +105,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div>
             <strong>Cinematic Universes</strong>
             <p>MCU and DC knowledge base with profile directories, timeline context, and team structure.</p>
+            <nav className="site-footer-links" aria-label="Footer">
+              <Link href="/about">About</Link>
+              <Link href="/contact">Contact</Link>
+              <Link href="/privacy">Privacy</Link>
+              <Link href="/terms">Terms</Link>
+              <Link href="/monetization">Monetization</Link>
+            </nav>
           </div>
           <p className="site-footer-meta">Built with Next.js static export.</p>
         </footer>

@@ -11,6 +11,8 @@ const factions: Faction[] = ["heroes", "villains", "antiheroes"];
 
 const staticRoutes = [
   "/",
+  "/about",
+  "/contact",
   "/coverage",
   "/mcu",
   "/mcu/heroes",
@@ -33,6 +35,9 @@ const staticRoutes = [
   "/dc/antiheroes",
   "/dc/justiceleague",
   "/dc/suicide-squad",
+  "/privacy",
+  "/terms",
+  "/monetization",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
