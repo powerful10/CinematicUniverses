@@ -20,6 +20,12 @@ const body = Source_Sans_3({
   weight: ["400", "500", "600", "700"],
 });
 
+const googleVerification =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION &&
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION !== "TOKEN"
+    ? process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    : "googlec865f91c502bf241";
+
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
@@ -70,7 +76,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "googlec865f91c502bf241",
+    google: googleVerification,
     other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
       ? {
           "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION,
