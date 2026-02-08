@@ -5,6 +5,7 @@ import Link from "next/link";
 import MainNav from "@/app/components/navigation/MainNav";
 import { withBasePath } from "@/app/lib/basePath";
 import { absoluteAssetUrl, absoluteUrl, getSiteUrl } from "@/app/lib/seo";
+import { coreSeoKeywords, mergeKeywords } from "@/app/lib/seoKeywords";
 
 import "./globals.css";
 
@@ -34,14 +35,7 @@ export const metadata: Metadata = {
   },
   description: "A complete MCU and DC encyclopedia of heroes, villains, antiheroes, teams, and timelines.",
   applicationName: "Cinematic Universes",
-  keywords: [
-    "MCU characters",
-    "DC characters",
-    "Marvel heroes",
-    "DC villains",
-    "comic character encyclopedia",
-    "cinematic universe guide",
-  ],
+  keywords: mergeKeywords([...coreSeoKeywords], ["Marvel Cinematic Universe", "DC Universe", "superhero profiles"]),
   alternates: {
     canonical: absoluteUrl("/"),
   },

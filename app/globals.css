@@ -251,6 +251,74 @@ a {
   gap: 1rem;
 }
 
+.search-intent-surface,
+.intent-inline-surface {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.search-intent-lead {
+  max-width: 76ch;
+  line-height: 1.45;
+}
+
+.search-intent-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.search-intent-card {
+  text-decoration: none;
+  border: 1px solid rgba(164, 186, 223, 0.22);
+  border-radius: 12px;
+  background: rgba(8, 13, 26, 0.76);
+  padding: 0.8rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.search-intent-card h3 {
+  font-size: 1rem;
+}
+
+.search-intent-card p {
+  font-size: 0.88rem;
+}
+
+.search-intent-card:hover {
+  border-color: rgba(56, 189, 248, 0.72);
+}
+
+.faq-surface {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.faq-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.faq-card {
+  border: 1px solid rgba(164, 186, 223, 0.22);
+  border-radius: 12px;
+  background: rgba(8, 13, 26, 0.7);
+  padding: 0.8rem;
+  display: grid;
+  gap: 0.38rem;
+}
+
+.faq-card h3 {
+  font-size: 1rem;
+}
+
+.faq-card p {
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
 .mini-link-row {
   margin-top: 0.9rem;
   display: flex;
@@ -835,6 +903,11 @@ a {
   }
 
   .home-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .search-intent-grid,
+  .faq-grid {
     grid-template-columns: 1fr;
   }
 

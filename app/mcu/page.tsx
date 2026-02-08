@@ -9,7 +9,14 @@ export const metadata: Metadata = buildPageMetadata({
   title: "MCU Universe Hub",
   description: "Browse MCU heroes, villains, antiheroes, phases, artifacts, and timeline pages in one structured hub.",
   path: "/mcu",
-  keywords: ["MCU hub", "Marvel Cinematic Universe characters", "MCU timeline", "MCU phases"],
+  keywords: [
+    "MCU hub",
+    "Marvel Cinematic Universe characters",
+    "MCU timeline",
+    "MCU phases",
+    "MCU heroes list",
+    "MCU villains list",
+  ],
 });
 
 const mcuRouteCards = [
@@ -24,6 +31,15 @@ const mcuRouteCards = [
   { href: "/mcu/locations", title: "Locations", detail: "Core geopolitical and cosmic environments." },
   { href: "/mcu/series", title: "Series", detail: "Disney+ arcs and post-Endgame developments." },
   { href: "/mcu/shield", title: "S.H.I.E.L.D.", detail: "Intelligence directives and intervention model." },
+];
+
+const mcuPopularQueries = [
+  { href: "/mcu/heroes", phrase: "MCU heroes ranked and listed" },
+  { href: "/mcu/villains", phrase: "MCU villains and major threats" },
+  { href: "/mcu/antiheroes", phrase: "Marvel antiheroes from movies and series" },
+  { href: "/mcu/timeline", phrase: "MCU timeline in chronological order" },
+  { href: "/mcu/phase1", phrase: "MCU phases explained" },
+  { href: "/mcu/artifacts", phrase: "Infinity Stones and MCU artifacts" },
 ];
 
 export default function MCUIndexPage() {
@@ -47,6 +63,21 @@ export default function MCUIndexPage() {
             <p>{card.detail}</p>
           </Link>
         ))}
+      </section>
+
+      <section className="section-surface intent-inline-surface">
+        <h2>Popular MCU Search Intents</h2>
+        <p className="search-intent-lead">
+          Use these quick paths if you are searching for specific Marvel Cinematic Universe character lists and timeline
+          references.
+        </p>
+        <div className="mini-link-row">
+          {mcuPopularQueries.map((entry) => (
+            <Link key={entry.href} href={entry.href}>
+              {entry.phrase}
+            </Link>
+          ))}
+        </div>
       </section>
 
       <section>

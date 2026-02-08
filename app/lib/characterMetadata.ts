@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import type { Faction, Universe } from "@/app/data/characters";
 import { factionLabel, getCharacterById, getCharacterRoute } from "@/app/data/characters";
 import { absoluteAssetUrl, absoluteUrl } from "@/app/lib/seo";
+import { coreSeoKeywords, mergeKeywords } from "@/app/lib/seoKeywords";
 
 function clipped(text: string, max = 170): string {
   if (text.length <= max) return text;
@@ -27,6 +28,20 @@ export function buildCharacterMetadata(universe: Universe, faction: Faction, id:
   const description = clipped(character.summary);
   const canonical = absoluteUrl(getCharacterRoute(character));
   const imageUrl = absoluteAssetUrl(character.image);
+  const universeLabel = character.universe === "mcu" ? "Marvel Cinematic Universe" : "DC Universe";
+  const keywords = mergeKeywords(
+    [...coreSeoKeywords],
+    [
+      character.name,
+      character.alias || "",
+      `${character.name} powers`,
+      `${character.name} profile`,
+      `${character.name} origin`,
+      `${character.universe.toUpperCase()} ${factionLabel(character.faction)}`,
+      `${universeLabel} ${factionLabel(character.faction)}`,
+      "character profile",
+    ],
+  );
 
   return {
     title,
@@ -34,12 +49,7 @@ export function buildCharacterMetadata(universe: Universe, faction: Faction, id:
     alternates: {
       canonical,
     },
-    keywords: [
-      character.name,
-      character.alias || "",
-      `${character.universe.toUpperCase()} ${factionLabel(character.faction)}`,
-      "character profile",
-    ].filter(Boolean),
+    keywords,
     openGraph: {
       title,
       description,
@@ -55,4 +65,3 @@ export function buildCharacterMetadata(universe: Universe, faction: Faction, id:
     },
   };
 }
-

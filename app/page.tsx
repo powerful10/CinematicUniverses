@@ -10,8 +10,77 @@ export const metadata: Metadata = buildPageMetadata({
   title: "MCU and DC Encyclopedia",
   description: "Explore MCU and DC heroes, villains, and antiheroes with searchable profiles and timeline context.",
   path: "/",
-  keywords: ["MCU encyclopedia", "DC encyclopedia", "Marvel character profiles", "DC character database"],
+  keywords: [
+    "MCU encyclopedia",
+    "DC encyclopedia",
+    "Marvel character profiles",
+    "DC character database",
+    "MCU heroes list",
+    "DC villains list",
+    "Marvel vs DC characters",
+  ],
 });
+
+const popularSearchRoutes = [
+  {
+    href: "/mcu/heroes",
+    query: "MCU heroes list",
+    detail: "Avengers and allied heroes with full profile pages.",
+  },
+  {
+    href: "/mcu/villains",
+    query: "MCU villains list",
+    detail: "Main antagonists, cosmic threats, and strategic adversaries.",
+  },
+  {
+    href: "/mcu/antiheroes",
+    query: "Marvel antiheroes list",
+    detail: "Characters operating between heroism and self-interest.",
+  },
+  {
+    href: "/dc/heroes",
+    query: "DC heroes list",
+    detail: "Justice League leaders and major city defenders.",
+  },
+  {
+    href: "/dc/villains",
+    query: "DC villains list",
+    detail: "Rogue masterminds, warlords, and top-level threats.",
+  },
+  {
+    href: "/dc/antiheroes",
+    query: "DC antiheroes list",
+    detail: "Morally gray operators including Suicide Squad figures.",
+  },
+  {
+    href: "/mcu/timeline",
+    query: "MCU timeline order",
+    detail: "Chronological mapping across MCU phases and major events.",
+  },
+  {
+    href: "/coverage",
+    query: "MCU and DC character coverage",
+    detail: "Current indexed counts and dataset freshness status.",
+  },
+];
+
+const faqEntries = [
+  {
+    question: "Does this site include both MCU and DC characters?",
+    answer:
+      "Yes. The site indexes heroes, villains, and antiheroes for both universes and links each profile to category hubs.",
+  },
+  {
+    question: "Can I browse by faction like heroes or villains?",
+    answer:
+      "Yes. Each universe hub provides direct links to heroes, villains, and antiheroes directories with search and sorting.",
+  },
+  {
+    question: "How often is character data updated?",
+    answer:
+      "The dataset is maintained through generation and validation scripts. The Coverage page displays the latest build time.",
+  },
+];
 
 export default function HomePage() {
   const mcuFeatured = getFeaturedCharacters("mcu", 6);
@@ -28,10 +97,23 @@ export default function HomePage() {
       name: "Cinematic Universes",
     },
   };
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqEntries.map((entry) => ({
+      "@type": "Question",
+      name: entry.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: entry.answer,
+      },
+    })),
+  };
 
   return (
     <main className="home-page">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <section className="hero-spotlight section-surface">
         <p className="eyebrow">Multiverse Archive</p>
@@ -81,6 +163,22 @@ export default function HomePage() {
         </article>
       </section>
 
+      <section className="section-surface search-intent-surface">
+        <h2>Popular Search Routes</h2>
+        <p className="search-intent-lead">
+          These are the highest-intent routes users usually search for first when looking for MCU and DC character data.
+        </p>
+
+        <div className="search-intent-grid">
+          {popularSearchRoutes.map((item) => (
+            <Link key={item.href} href={item.href} className="search-intent-card">
+              <h3>{item.query}</h3>
+              <p>{item.detail}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section>
         <div className="section-headline">
           <h2>Featured MCU Profiles</h2>
@@ -101,6 +199,18 @@ export default function HomePage() {
         <div className="character-grid">
           {dcFeatured.map((character) => (
             <CharacterCard key={`home-dc-${character.id}`} character={character} />
+          ))}
+        </div>
+      </section>
+
+      <section className="section-surface faq-surface">
+        <h2>FAQ</h2>
+        <div className="faq-grid">
+          {faqEntries.map((entry) => (
+            <article key={entry.question} className="faq-card">
+              <h3>{entry.question}</h3>
+              <p>{entry.answer}</p>
+            </article>
           ))}
         </div>
       </section>

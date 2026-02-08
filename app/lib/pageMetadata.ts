@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { absoluteAssetUrl, absoluteUrl } from "@/app/lib/seo";
+import { coreSeoKeywords, mergeKeywords } from "@/app/lib/seoKeywords";
 
 type PageMetadataOptions = {
   title: string;
@@ -12,11 +13,12 @@ type PageMetadataOptions = {
 export function buildPageMetadata(options: PageMetadataOptions): Metadata {
   const canonical = absoluteUrl(options.path);
   const previewImage = absoluteAssetUrl("/favicon.png");
+  const pageKeywords = mergeKeywords([...coreSeoKeywords], options.keywords || []);
 
   return {
     title: options.title,
     description: options.description,
-    keywords: options.keywords,
+    keywords: pageKeywords,
     alternates: { canonical },
     openGraph: {
       title: options.title,
@@ -34,4 +36,3 @@ export function buildPageMetadata(options: PageMetadataOptions): Metadata {
     },
   };
 }
-
