@@ -95,6 +95,13 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5266296505652960"
+          crossOrigin="anonymous"
+        ></script>
+      </head>
       <body className={`${display.variable} ${body.variable}`}>
         <div className="app-bg-overlay" aria-hidden="true" />
         <MainNav />
