@@ -71,9 +71,15 @@ export default function CoveragePage() {
         <article className="section-surface">
           <h2>Dataset Build</h2>
           <p>Last generated: {dateLabel(charactersUpdatedAt)}</p>
-          <p className="source-desc">
-            Data lives in <code>app/data/characters.generated.json</code> and is refreshed by the generator script.
-          </p>
+<p className="source-desc">
+  If you’d like to help expand our list of heroes, antiheroes, and villains from DC and the MCU, feel free to contact me at:{" "}
+<a
+  href="mailto:dls2026me10@gmail.com"
+  className="text-blue-500 underline hover:text-blue-700"
+>
+  dls2026me10@gmail.com
+</a>
+</p>        
         </article>
       </section>
 
