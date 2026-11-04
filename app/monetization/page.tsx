@@ -16,23 +16,24 @@ export default function MonetizationPage() {
         <p className="eyebrow">Disclosure</p>
         <h1>Monetization and Transparency</h1>
         <p>
-          This page explains how revenue may be generated in the future while preserving editorial integrity for profile
-          content.
+          This page explains how Cinematic Universes generates revenue to support hosting and dataset curation while
+          preserving editorial integrity and a clean reader experience.
         </p>
       </section>
 
       <section className="section-surface">
-        <h2>Advertising</h2>
+        <h2>Advertising Formats</h2>
         <p className="policy-copy">
-          The site may display ads through third-party networks. Ad placement does not change how profiles are structured
-          or ranked.
+          The site displays non-intrusive advertisements through third-party networks including Google AdSense and
+          Monetag (such as responsive display banners, vignette transitions, and corner notifications). Ad placement
+          never alters how character profiles are structured, scored, or ranked.
         </p>
       </section>
 
       <section className="section-surface">
         <h2>Sponsorships and Partnerships</h2>
         <p className="policy-copy">
-          Any paid placement, sponsored sections, or partner content will be clearly labeled.
+          Any paid placement, sponsored sections, or partner content is clearly labeled as Sponsored.
         </p>
       </section>
 

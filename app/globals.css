@@ -978,3 +978,223 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+/* Quick Search on Homepage */
+.quick-search-box {
+  margin-top: 1.1rem;
+  display: grid;
+  gap: 0.6rem;
+  max-width: 780px;
+}
+
+.quick-search-controls {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.quick-search-input {
+  flex: 1 1 320px;
+  border-radius: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  background: rgba(6, 11, 22, 0.9);
+  color: #eff6ff;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.95rem;
+  box-shadow: 0 8px 24px rgba(2, 6, 16, 0.35);
+}
+
+.quick-search-input:focus {
+  outline: 2px solid rgba(56, 189, 248, 0.8);
+  outline-offset: 1px;
+}
+
+.quick-search-tabs {
+  display: inline-flex;
+  gap: 0.35rem;
+  background: rgba(6, 11, 22, 0.78);
+  padding: 0.25rem;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.26);
+}
+
+.quick-search-tab {
+  border: none;
+  background: transparent;
+  color: var(--text-soft);
+  padding: 0.4rem 0.72rem;
+  border-radius: 9px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.quick-search-tab.active {
+  background: rgba(56, 189, 248, 0.2);
+  color: #ffffff;
+}
+
+.quick-search-results {
+  border-radius: 14px;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  background: rgba(8, 14, 28, 0.96);
+  padding: 0.45rem;
+  display: grid;
+  gap: 0.3rem;
+  box-shadow: 0 18px 40px rgba(2, 6, 16, 0.55);
+}
+
+.quick-search-result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.52rem 0.75rem;
+  border-radius: 10px;
+  text-decoration: none;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid transparent;
+  transition: border-color 0.16s ease, background 0.16s ease;
+}
+
+.quick-search-result-item:hover {
+  border-color: rgba(249, 115, 22, 0.75);
+  background: rgba(23, 35, 62, 0.85);
+}
+
+.quick-search-alias {
+  color: #9bb1d8;
+  font-size: 0.86rem;
+}
+
+.quick-search-badge {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-cool);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.quick-search-empty {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.88rem;
+}
+
+/* Directory Team Filter Chips */
+.directory-toolbar-wrap {
+  margin-bottom: 0.9rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.directory-toolbar-wrap .directory-toolbar {
+  margin-bottom: 0;
+}
+
+.directory-affiliation-chips {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(157, 183, 255, 0.14);
+}
+
+.directory-chip-label {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9bb1d8;
+  margin-right: 0.25rem;
+}
+
+.filter-chip {
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(7, 13, 24, 0.75);
+  color: #d8e7ff;
+  padding: 0.26rem 0.62rem;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+
+.filter-chip:hover {
+  border-color: rgba(56, 189, 248, 0.65);
+}
+
+.filter-chip.active {
+  border-color: rgba(249, 115, 22, 0.85);
+  background: rgba(249, 115, 22, 0.22);
+  color: #ffffff;
+}
+
+/* Character Card Power Badge */
+.character-card-power {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  background: rgba(6, 10, 20, 0.85);
+  border: 1px solid rgba(251, 146, 60, 0.6);
+  color: #fed7aa;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.2rem 0.48rem;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+
+/* Profile Breadcrumbs & Related Section */
+.profile-breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  font-size: 0.84rem;
+  color: #9bb1d8;
+}
+
+.profile-breadcrumbs a {
+  text-decoration: none;
+  color: #c9dcff;
+}
+
+.profile-breadcrumbs a:hover {
+  color: var(--accent-cool);
+}
+
+.related-characters-section {
+  margin-top: 0.5rem;
+}
+
+/* Native Ad Slot Surface */
+.ad-slot-surface {
+  border: 1px solid rgba(157, 183, 255, 0.16);
+  border-radius: 14px;
+  background: rgba(8, 13, 25, 0.55);
+  padding: 0.6rem 0.9rem;
+  margin: 0.4rem 0;
+  overflow: hidden;
+}
+
+.ad-slot-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.25rem;
+}
+
+.ad-slot-badge {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(155, 177, 216, 0.65);
+}
+
+.ad-slot-inner {
+  min-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

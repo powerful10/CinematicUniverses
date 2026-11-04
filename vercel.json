@@ -7,6 +7,19 @@
   ],
   "headers": [
     {
+      "source": "/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/"
+        }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         {
@@ -15,15 +28,15 @@
         },
         {
           "key": "X-Frame-Options",
-          "value": "DENY"
+          "value": "SAMEORIGIN"
         },
         {
           "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
+          "value": "no-referrer-when-downgrade"
         },
         {
           "key": "Permissions-Policy",
-          "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+          "value": "camera=(), microphone=(), geolocation=()"
         },
         {
           "key": "Strict-Transport-Security",
@@ -31,15 +44,15 @@
         },
         {
           "key": "Cross-Origin-Opener-Policy",
-          "value": "same-origin"
+          "value": "unsafe-none"
         },
         {
           "key": "Cross-Origin-Resource-Policy",
-          "value": "same-origin"
+          "value": "cross-origin"
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https:; upgrade-insecure-requests"
+          "value": "default-src 'self' https:; base-uri 'self'; frame-ancestors 'self'; form-action 'self' https:; object-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: blob:; worker-src 'self' blob: https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https: http:; font-src 'self' data: https:; connect-src 'self' https: wss:; frame-src 'self' https: data: blob:; media-src 'self' https: data: blob:; upgrade-insecure-requests"
         }
       ]
     },

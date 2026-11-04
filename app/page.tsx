@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import AdBanner from "@/app/components/ads/AdBanner";
 import CharacterCard from "@/app/components/characters/CharacterCard";
-import { getFeaturedCharacters, getUniverseCharacterCount } from "@/app/data/characters";
+import HomeQuickSearch from "@/app/components/search/HomeQuickSearch";
+import {
+  factionLabel,
+  getAllCharacters,
+  getCharacterRoute,
+  getFeaturedCharacters,
+  getUniverseCharacterCount,
+} from "@/app/data/characters";
 import { buildPageMetadata } from "@/app/lib/pageMetadata";
 import { absoluteUrl } from "@/app/lib/seo";
 
@@ -85,6 +93,17 @@ const faqEntries = [
 export default function HomePage() {
   const mcuFeatured = getFeaturedCharacters("mcu", 6);
   const dcFeatured = getFeaturedCharacters("dc", 6);
+  const quickSearchItems = getAllCharacters().map((c) => ({
+    id: c.id,
+    name: c.name,
+    alias: c.alias,
+    universe: c.universe,
+    faction: factionLabel(c.faction),
+    alignment: c.alignment,
+    route: getCharacterRoute(c),
+    affiliations: c.affiliations || [],
+  }));
+
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -116,19 +135,24 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <section className="hero-spotlight section-surface">
-        <p className="eyebrow">Multiverse Archive</p>
+        <p className="eyebrow">Multiverse Archive • {quickSearchItems.length} Indexed Dossiers</p>
         <h1>Step Into the Cinematic Universes</h1>
         <p>
           Explore a fully structured MCU and DC encyclopedia with character dossiers, faction directories, timeline context,
           and strategic team breakdowns.
         </p>
 
+        <HomeQuickSearch items={quickSearchItems} />
+
         <div className="hero-actions">
           <Link href="/mcu" className="pill-link">
-            Enter MCU
+            Enter MCU ({getUniverseCharacterCount("mcu")})
           </Link>
           <Link href="/dc" className="pill-link muted">
-            Enter DC
+            Enter DC ({getUniverseCharacterCount("dc")})
+          </Link>
+          <Link href="/mcu/timeline" className="pill-link muted">
+            MCU Timeline
           </Link>
         </div>
       </section>
@@ -178,6 +202,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <AdBanner label="Sponsored Spotlight" />
 
       <section>
         <div className="section-headline">

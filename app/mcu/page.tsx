@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import AdBanner from "@/app/components/ads/AdBanner";
 import CharacterCard from "@/app/components/characters/CharacterCard";
 import { getFeaturedCharacters } from "@/app/data/characters";
 import { buildPageMetadata } from "@/app/lib/pageMetadata";
@@ -46,7 +47,7 @@ export default function MCUIndexPage() {
   const featured = getFeaturedCharacters("mcu", 8);
 
   return (
-    <main>
+    <main className="home-page">
       <section className="section-surface page-intro">
         <p className="eyebrow">Universe Hub</p>
         <h1>Marvel Cinematic Universe</h1>
@@ -79,6 +80,8 @@ export default function MCUIndexPage() {
           ))}
         </div>
       </section>
+
+      <AdBanner label="Sponsored MCU Spotlight" />
 
       <section>
         <div className="section-headline">

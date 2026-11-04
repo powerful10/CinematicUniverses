@@ -97,4 +97,40 @@ export function factionLabel(faction: Faction): string {
   return "Antiheroes";
 }
 
+export function getAllCharacters(): CharacterRecord[] {
+  return [
+    ...dataset.universes.mcu.heroes,
+    ...dataset.universes.mcu.villains,
+    ...dataset.universes.mcu.antiheroes,
+    ...dataset.universes.dc.heroes,
+    ...dataset.universes.dc.villains,
+    ...dataset.universes.dc.antiheroes,
+  ];
+}
+
+export function getRelatedCharacters(character: CharacterRecord, limit = 6): CharacterRecord[] {
+  const sameUniversePool = [
+    ...dataset.universes[character.universe].heroes,
+    ...dataset.universes[character.universe].villains,
+    ...dataset.universes[character.universe].antiheroes,
+  ].filter((candidate) => candidate.id !== character.id);
+
+  const affiliationSet = new Set((character.affiliations || []).map((a) => a.toLowerCase()));
+
+  const scored = sameUniversePool.map((candidate) => {
+    let score = 0;
+    if (candidate.faction === character.faction) score += 2;
+    for (const aff of candidate.affiliations || []) {
+      if (affiliationSet.has(aff.toLowerCase())) {
+        score += 4;
+      }
+    }
+    return { candidate, score };
+  });
+
+  scored.sort((a, b) => b.score - a.score || a.candidate.name.localeCompare(b.candidate.name));
+  return scored.slice(0, limit).map((item) => item.candidate);
+}
+
 export const roster = dataset.universes;
+

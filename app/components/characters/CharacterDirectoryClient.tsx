@@ -1,7 +1,8 @@
-﻿"use client";
+"use client";
 
 import { useMemo, useState } from "react";
 
+import AdBanner from "@/app/components/ads/AdBanner";
 import type { CharacterRecord } from "@/app/data/characters";
 import CharacterCard from "@/app/components/characters/CharacterCard";
 
@@ -41,15 +42,40 @@ function includesQuery(character: CharacterRecord, query: string): boolean {
 export default function CharacterDirectoryClient({ title, characters }: DirectoryClientProps) {
   const [query, setQuery] = useState("");
   const [sortMode, setSortMode] = useState<SortMode>("az");
+  const [activeAffiliation, setActiveAffiliation] = useState<string | null>(null);
 
-  const hasCustomFilters = query.trim().length > 0 || sortMode !== "az";
+  const topAffiliations = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const c of characters) {
+      for (const aff of c.affiliations || []) {
+        const clean = aff.trim();
+        if (clean) counts.set(clean, (counts.get(clean) || 0) + 1);
+      }
+    }
+    return Array.from(counts.entries())
+      .filter(([, count]) => count >= 2)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 6)
+      .map(([name]) => name);
+  }, [characters]);
+
+  const hasCustomFilters =
+    query.trim().length > 0 || sortMode !== "az" || activeAffiliation !== null;
 
   const visibleCharacters = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
     let filtered = characters;
 
+    if (activeAffiliation) {
+      filtered = filtered.filter((character) =>
+        (character.affiliations || []).some(
+          (aff) => aff.trim().toLowerCase() === activeAffiliation.toLowerCase(),
+        ),
+      );
+    }
+
     if (normalizedQuery) {
-      filtered = characters.filter((character) => includesQuery(character, normalizedQuery));
+      filtered = filtered.filter((character) => includesQuery(character, normalizedQuery));
     }
 
     const sorted = [...filtered];
@@ -63,52 +89,78 @@ export default function CharacterDirectoryClient({ title, characters }: Director
     }
 
     return sorted;
-  }, [characters, query, sortMode]);
+  }, [characters, query, sortMode, activeAffiliation]);
 
   return (
     <>
-      <section className="directory-toolbar section-surface" aria-label={`${title} filters`}>
-        <div className="directory-toolbar-field">
-          <label htmlFor="character-search">Search</label>
-          <input
-            id="character-search"
-            type="search"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search name, alias, affiliation..."
-          />
+      <section className="directory-toolbar-wrap section-surface" aria-label={`${title} filters`}>
+        <div className="directory-toolbar">
+          <div className="directory-toolbar-field">
+            <label htmlFor="character-search">Search</label>
+            <input
+              id="character-search"
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Search name, alias, affiliation..."
+            />
+          </div>
+
+          <div className="directory-toolbar-field">
+            <label htmlFor="character-sort">Sort</label>
+            <select
+              id="character-sort"
+              value={sortMode}
+              onChange={(event) => setSortMode(event.target.value as SortMode)}
+            >
+              <option value="az">A to Z</option>
+              <option value="za">Z to A</option>
+              <option value="power">Power Snapshot</option>
+            </select>
+          </div>
+
+          <p className="directory-toolbar-count" aria-live="polite">
+            Showing {visibleCharacters.length} of {characters.length}
+          </p>
+
+          <div className="directory-toolbar-actions">
+            <button
+              type="button"
+              className="directory-reset"
+              onClick={() => {
+                setQuery("");
+                setSortMode("az");
+                setActiveAffiliation(null);
+              }}
+              disabled={!hasCustomFilters}
+            >
+              Reset Filters
+            </button>
+          </div>
         </div>
 
-        <div className="directory-toolbar-field">
-          <label htmlFor="character-sort">Sort</label>
-          <select
-            id="character-sort"
-            value={sortMode}
-            onChange={(event) => setSortMode(event.target.value as SortMode)}
-          >
-            <option value="az">A to Z</option>
-            <option value="za">Z to A</option>
-            <option value="power">Power Snapshot</option>
-          </select>
-        </div>
-
-        <p className="directory-toolbar-count" aria-live="polite">
-          Showing {visibleCharacters.length} of {characters.length}
-        </p>
-
-        <div className="directory-toolbar-actions">
-          <button
-            type="button"
-            className="directory-reset"
-            onClick={() => {
-              setQuery("");
-              setSortMode("az");
-            }}
-            disabled={!hasCustomFilters}
-          >
-            Reset Filters
-          </button>
-        </div>
+        {topAffiliations.length > 0 && (
+          <div className="directory-affiliation-chips" aria-label="Quick team filters">
+            <span className="directory-chip-label">Teams:</span>
+            <button
+              type="button"
+              className={activeAffiliation === null ? "filter-chip active" : "filter-chip"}
+              onClick={() => setActiveAffiliation(null)}
+            >
+              All
+            </button>
+            {topAffiliations.map((team) => (
+              <button
+                key={team}
+                type="button"
+                className={activeAffiliation === team ? "filter-chip active" : "filter-chip"}
+                onClick={() => setActiveAffiliation(activeAffiliation === team ? null : team)}
+              >
+                {team}
+              </button>
+            ))}
+          </div>
+        )}
       </section>
 
       {visibleCharacters.length ? (
@@ -123,6 +175,8 @@ export default function CharacterDirectoryClient({ title, characters }: Director
           <p>Try a different name, alias, or clear the search query.</p>
         </section>
       )}
+
+      <AdBanner label="Sponsored Directory Partner" />
     </>
   );
 }

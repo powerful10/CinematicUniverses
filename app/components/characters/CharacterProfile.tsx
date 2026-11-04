@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import AdBanner from "@/app/components/ads/AdBanner";
+import CharacterCard from "@/app/components/characters/CharacterCard";
 import type { CharacterRecord, Faction, Universe } from "@/app/data/characters";
-import { factionLabel, getCharacterRoute } from "@/app/data/characters";
+import { factionLabel, getCharacterRoute, getRelatedCharacters } from "@/app/data/characters";
 import { withBasePath } from "@/app/lib/basePath";
 import { absoluteAssetUrl, absoluteUrl } from "@/app/lib/seo";
 
@@ -67,6 +69,16 @@ function buildSummaryParagraphs(summary: string): string[] {
 export default function CharacterProfile({ character }: CharacterProfileProps) {
   const categoryRoute = getCategoryRoute(character.universe, character.faction);
   const summaryParagraphs = buildSummaryParagraphs(character.summary);
+  const relatedCharacters = getRelatedCharacters(character, 6);
+  const totalPowerScore = character.stats
+    ? character.stats.intelligence +
+      character.stats.strength +
+      character.stats.speed +
+      character.stats.durability +
+      character.stats.power +
+      character.stats.combat
+    : null;
+
   const profileSchema = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
@@ -90,9 +102,51 @@ export default function CharacterProfile({ character }: CharacterProfileProps) {
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: absoluteUrl("/"),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: character.universe.toUpperCase(),
+        item: absoluteUrl(`/${character.universe}`),
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: factionLabel(character.faction),
+        item: absoluteUrl(categoryRoute),
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: character.name,
+        item: absoluteUrl(getCharacterRoute(character)),
+      },
+    ],
+  };
+
   return (
     <main className="character-profile">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
+      <nav className="profile-breadcrumbs" aria-label="Breadcrumb">
+        <Link href="/">Home</Link>
+        <span>/</span>
+        <Link href={`/${character.universe}`}>{character.universe.toUpperCase()}</Link>
+        <span>/</span>
+        <Link href={categoryRoute}>{factionLabel(character.faction)}</Link>
+        <span>/</span>
+        <span aria-current="page">{character.name}</span>
+      </nav>
 
       <div className="profile-banner section-surface">
         <div className="profile-media-frame">
@@ -101,6 +155,7 @@ export default function CharacterProfile({ character }: CharacterProfileProps) {
             alt={character.name}
             width={720}
             height={1080}
+            priority
             sizes="(max-width: 1100px) 100vw, 320px"
           />
         </div>
@@ -108,6 +163,7 @@ export default function CharacterProfile({ character }: CharacterProfileProps) {
         <div className="profile-banner-content">
           <p className="profile-kicker">
             {character.universe.toUpperCase()} {factionLabel(character.faction)}
+            {totalPowerScore ? ` • Power Rating: ${totalPowerScore}/600` : ""}
           </p>
           <h1>{character.name}</h1>
           {character.alias ? <p className="profile-alias">Also known as {character.alias}</p> : null}
@@ -238,6 +294,22 @@ export default function CharacterProfile({ character }: CharacterProfileProps) {
           ) : null}
         </article>
       </section>
+
+      <AdBanner label="Sponsored Recommended" />
+
+      {relatedCharacters.length > 0 && (
+        <section className="related-characters-section">
+          <div className="section-headline">
+            <h2>Related {character.universe.toUpperCase()} Profiles</h2>
+            <Link href={categoryRoute}>Explore all {factionLabel(character.faction)}</Link>
+          </div>
+          <div className="character-grid">
+            {relatedCharacters.map((rel) => (
+              <CharacterCard key={`rel-${rel.id}`} character={rel} />
+            ))}
+          </div>
+        </section>
+      )}
     </main>
   );
 }

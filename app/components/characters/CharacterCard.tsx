@@ -10,6 +10,15 @@ type CharacterCardProps = {
 };
 
 export default function CharacterCard({ character }: CharacterCardProps) {
+  const powerScore = character.stats
+    ? character.stats.intelligence +
+      character.stats.strength +
+      character.stats.speed +
+      character.stats.durability +
+      character.stats.power +
+      character.stats.combat
+    : null;
+
   return (
     <Link href={getCharacterRoute(character)} className="character-card">
       <div className="character-card-media">
@@ -19,10 +28,17 @@ export default function CharacterCard({ character }: CharacterCardProps) {
           fill
           sizes="(max-width: 820px) 50vw, (max-width: 1320px) 20vw, 240px"
         />
+        {powerScore ? (
+          <span className="character-card-power" title="Combined Power Snapshot">
+            ⚡ {powerScore}
+          </span>
+        ) : null}
       </div>
 
       <div className="character-card-body">
-        <p className="character-card-alignment">{character.alignment}</p>
+        <p className="character-card-alignment">
+          {character.universe.toUpperCase()} • {character.alignment}
+        </p>
         <h3>{character.name}</h3>
         {character.alias ? <p className="character-card-alias">{character.alias}</p> : null}
         <p className="character-card-summary">{character.summary}</p>

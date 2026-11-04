@@ -37,10 +37,12 @@ export default function PrivacyPage() {
       </section>
 
       <section className="section-surface">
-        <h2>Third-Party Services</h2>
+        <h2>Third-Party Services &amp; Advertising</h2>
         <p className="policy-copy">
-          The site may use hosting, analytics, and search indexing services such as Vercel, Google Search Console, and
-          Bing Webmaster tools. Those services process data under their own policies.
+          The site uses hosting, analytics, search indexing, and advertising services including Vercel, Google Search
+          Console, Bing Webmaster Tools, Google AdSense, and Monetag. Advertising networks may use cookies or web
+          beacons to serve relevant, frequency-capped advertisements. Those services process data under their own
+          respective privacy policies.
         </p>
       </section>
 
