@@ -106,6 +106,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: `(function(s){s.dataset.zone='12192845',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(s){s.dataset.zone='12192853',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))`,
+          }}
+        />
       </head>
       <body className={`${display.variable} ${body.variable}`}>
         <div className="app-bg-overlay" aria-hidden="true" />
