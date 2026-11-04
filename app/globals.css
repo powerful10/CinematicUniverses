@@ -1168,33 +1168,111 @@ a {
   margin-top: 0.5rem;
 }
 
-/* Native Ad Slot Surface */
+/* Native Ad Slot Surface & Monetag Direct Link Card */
 .ad-slot-surface {
-  border: 1px solid rgba(157, 183, 255, 0.16);
-  border-radius: 14px;
-  background: rgba(8, 13, 25, 0.55);
-  padding: 0.6rem 0.9rem;
-  margin: 0.4rem 0;
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  border-radius: 16px;
+  background:
+    linear-gradient(125deg, rgba(249, 115, 22, 0.14), rgba(56, 189, 248, 0.12)),
+    rgba(10, 16, 30, 0.86);
+  margin: 0.5rem 0;
   overflow: hidden;
+  box-shadow: 0 12px 32px rgba(2, 6, 16, 0.35);
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.ad-slot-header {
+.ad-slot-surface:hover {
+  border-color: rgba(249, 115, 22, 0.75);
+  transform: translateY(-2px);
+}
+
+.direct-link-promo {
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 0.25rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  padding: 1.05rem 1.25rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.direct-link-content {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.direct-link-BadgeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .ad-slot-badge {
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: rgba(155, 177, 216, 0.65);
+  letter-spacing: 0.11em;
+  color: #9bb1d8;
+  font-weight: 700;
 }
 
-.ad-slot-inner {
-  min-height: 20px;
-  display: flex;
-  justify-content: center;
+.direct-link-pill {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #fed7aa;
+  background: rgba(249, 115, 22, 0.2);
+  border: 1px solid rgba(249, 115, 22, 0.5);
+  padding: 0.12rem 0.48rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.direct-link-title {
+  font-size: 1.12rem;
+  color: #ffffff;
+}
+
+.direct-link-desc {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  max-width: 72ch;
+}
+
+.direct-link-action {
+  flex-shrink: 0;
+}
+
+.direct-link-cta {
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(249, 115, 22, 0.8);
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.32), rgba(56, 189, 248, 0.22));
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.86rem;
+  padding: 0.55rem 1rem;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.direct-link-promo:hover .direct-link-cta {
+  background: rgba(249, 115, 22, 0.48);
+  border-color: #fb923c;
+}
+
+@media (max-width: 720px) {
+  .direct-link-promo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .direct-link-action,
+  .direct-link-cta {
+    width: 100%;
+  }
 }
 

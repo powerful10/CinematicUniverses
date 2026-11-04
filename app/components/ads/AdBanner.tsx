@@ -1,55 +1,42 @@
-"use client";
-
-import { useEffect, useRef } from "react";
+import React from "react";
 
 type AdBannerProps = {
-  slot?: string;
-  format?: "auto" | "fluid" | "rectangle" | "horizontal";
   label?: string;
+  title?: string;
+  description?: string;
+  ctaText?: string;
   className?: string;
 };
 
-declare global {
-  interface Window {
-    adsbygoogle?: Array<Record<string, unknown>>;
-  }
-}
+const MONETAG_DIRECT_LINK = "https://uplcm.com/4/12193075";
 
 export default function AdBanner({
-  slot = "auto",
-  format = "auto",
-  label = "Sponsored",
+  label = "Sponsored Spotlight",
+  title = "Unlock Exclusive Superhero Gaming, Streaming & Collector Deals",
+  description = "Discover trending partner offers, entertainment perks, and featured multiverse promotions curated for fans.",
+  ctaText = "Explore Partner Offer →",
   className = "",
 }: AdBannerProps) {
-  const pushedRef = useRef(false);
-
-  useEffect(() => {
-    if (pushedRef.current) return;
-    try {
-      if (typeof window !== "undefined") {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-        pushedRef.current = true;
-      }
-    } catch {
-      // AdSense may be blocked by ad blockers or waiting for approval
-    }
-  }, []);
-
   return (
     <aside className={`ad-slot-surface ${className}`.trim()} aria-label={label}>
-      <div className="ad-slot-header">
-        <span className="ad-slot-badge">{label}</span>
-      </div>
-      <div className="ad-slot-inner">
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block", width: "100%" }}
-          data-ad-client="ca-pub-5266296505652960"
-          data-ad-slot={slot !== "auto" ? slot : undefined}
-          data-ad-format={format}
-          data-full-width-responsive="true"
-        />
-      </div>
+      <a
+        href={MONETAG_DIRECT_LINK}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        className="direct-link-promo"
+      >
+        <div className="direct-link-content">
+          <div className="direct-link-BadgeRow">
+            <span className="ad-slot-badge">{label}</span>
+            <span className="direct-link-pill">Featured Partner</span>
+          </div>
+          <h3 className="direct-link-title">{title}</h3>
+          <p className="direct-link-desc">{description}</p>
+        </div>
+        <div className="direct-link-action">
+          <span className="direct-link-cta">{ctaText}</span>
+        </div>
+      </a>
     </aside>
   );
 }

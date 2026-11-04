@@ -295,7 +295,12 @@ export default function CharacterProfile({ character }: CharacterProfileProps) {
         </article>
       </section>
 
-      <AdBanner label="Sponsored Recommended" />
+      <AdBanner
+        label="Sponsored Recommended"
+        title={`More ${character.universe.toUpperCase()} Fan Perks, Streaming & Gaming Offers`}
+        description={`Check out today's featured partner content and interactive entertainment deals while exploring ${character.name}.`}
+        ctaText="Open Featured Offer →"
+      />
 
       {relatedCharacters.length > 0 && (
         <section className="related-characters-section">
