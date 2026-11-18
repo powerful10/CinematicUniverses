@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import AdBanner from "@/app/components/ads/AdBanner";
 import ShareButton from "@/app/components/characters/ShareButton";
@@ -52,7 +52,6 @@ function computeWinProbability(a: CompareCharacter, b: CompareCharacter): { pctA
   const sA = totalScore(a);
   const sB = totalScore(b);
   const diff = sA - sB;
-  // Smooth logistic curve capped between 8% and 92% so every matchup feels realistic
   const raw = 1 / (1 + Math.exp(-diff / 42));
   const pctA = Math.min(92, Math.max(8, Math.round(raw * 100)));
   return { pctA, pctB: 100 - pctA };
@@ -98,6 +97,109 @@ function buildFightAnalysis(a: CompareCharacter, b: CompareCharacter) {
   ];
 }
 
+function FighterPicker({
+  label,
+  selected,
+  characters,
+  onSelect,
+}: {
+  label: string;
+  selected: CompareCharacter;
+  characters: CompareCharacter[];
+  onSelect: (id: string) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const [search, setSearch] = useState("");
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onDocClick = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", onDocClick);
+    return () => document.removeEventListener("mousedown", onDocClick);
+  }, []);
+
+  const filtered = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    if (!q) return characters;
+    return characters.filter(
+      (c) =>
+        c.name.toLowerCase().includes(q) ||
+        (c.alias || "").toLowerCase().includes(q) ||
+        c.universe.toLowerCase().includes(q) ||
+        c.faction.toLowerCase().includes(q)
+    );
+  }, [characters, search]);
+
+  return (
+    <div className="fighter-picker" ref={containerRef}>
+      <span className="fighter-picker-label">{label}</span>
+      <button
+        type="button"
+        className="fighter-picker-trigger"
+        onClick={(e) => {
+          e.stopPropagation();
+          setOpen((prev) => !prev);
+        }}
+        aria-expanded={open}
+      >
+        <span>
+          {selected.name}{" "}
+          <small className="fighter-picker-meta">
+            ({selected.universe.toUpperCase()} • {selected.faction})
+          </small>
+        </span>
+        <span aria-hidden="true">{open ? "▲" : "▼"}</span>
+      </button>
+
+      {open && (
+        <div className="fighter-picker-dropdown" onClick={(e) => e.stopPropagation()}>
+          <input
+            type="search"
+            className="fighter-picker-search"
+            placeholder="Type to filter heroes, villains, antiheroes..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            autoFocus
+          />
+          <div className="fighter-picker-list" role="listbox">
+            {filtered.length > 0 ? (
+              filtered.map((c) => (
+                <button
+                  key={`${label}-${c.universe}-${c.id}`}
+                  type="button"
+                  role="option"
+                  aria-selected={c.id === selected.id}
+                  className={
+                    c.id === selected.id
+                      ? "fighter-picker-option active"
+                      : "fighter-picker-option"
+                  }
+                  onClick={() => {
+                    onSelect(c.id);
+                    setOpen(false);
+                    setSearch("");
+                  }}
+                >
+                  <span>{c.name}</span>
+                  <small>
+                    {c.universe.toUpperCase()} • {c.faction}
+                  </small>
+                </button>
+              ))
+            ) : (
+              <p className="fighter-picker-empty">No matches for &ldquo;{search}&rdquo;</p>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 const presets: Array<{ label: string; a: string; b: string }> = [
   { label: "Hulk vs Red Hulk", a: "hulk", b: "red-hulk" },
   { label: "Iron Man vs Batman", a: "iron-man", b: "batman" },
@@ -116,7 +218,6 @@ export default function CompareArenaClient({ characters }: { characters: Compare
   const [idA, setIdA] = useState(defaultA?.id || "");
   const [idB, setIdB] = useState(defaultB?.id || "");
 
-  // Sync from URL query params (?a=...&b=...) on mount
   useEffect(() => {
     if (typeof window === "undefined") return;
     const params = new URLSearchParams(window.location.search);
@@ -126,7 +227,6 @@ export default function CompareArenaClient({ characters }: { characters: Compare
     if (qb && characters.some((c) => c.id === qb)) setIdB(qb);
   }, [characters]);
 
-  // Keep URL updated for instant sharing
   useEffect(() => {
     if (typeof window === "undefined" || !idA || !idB) return;
     const url = new URL(window.location.href);
@@ -181,31 +281,23 @@ export default function CompareArenaClient({ characters }: { characters: Compare
         </div>
 
         <div className="compare-selectors">
-          <div className="directory-toolbar-field">
-            <label htmlFor="fighter-a">Fighter 1</label>
-            <select id="fighter-a" value={charA.id} onChange={(e) => setIdA(e.target.value)}>
-              {characters.map((c) => (
-                <option key={`a-${c.universe}-${c.id}`} value={c.id}>
-                  {c.name} ({c.universe.toUpperCase()})
-                </option>
-              ))}
-            </select>
-          </div>
+          <FighterPicker
+            label="Fighter 1"
+            selected={charA}
+            characters={characters}
+            onSelect={setIdA}
+          />
 
           <div className="compare-vs-badge" aria-hidden="true">
             VS
           </div>
 
-          <div className="directory-toolbar-field">
-            <label htmlFor="fighter-b">Fighter 2</label>
-            <select id="fighter-b" value={charB.id} onChange={(e) => setIdB(e.target.value)}>
-              {characters.map((c) => (
-                <option key={`b-${c.universe}-${c.id}`} value={c.id}>
-                  {c.name} ({c.universe.toUpperCase()})
-                </option>
-              ))}
-            </select>
-          </div>
+          <FighterPicker
+            label="Fighter 2"
+            selected={charB}
+            characters={characters}
+            onSelect={setIdB}
+          />
         </div>
       </section>
 

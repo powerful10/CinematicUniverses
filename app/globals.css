@@ -1453,4 +1453,109 @@ a {
   transition: width 0.35s ease;
 }
 
+/* Custom Searchable FighterPicker Dropdown */
+.fighter-picker {
+  position: relative;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.fighter-picker-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9bb1d8;
+}
+
+.fighter-picker-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(159, 184, 234, 0.35);
+  background: rgba(7, 13, 24, 0.9);
+  color: #e8f0ff;
+  padding: 0.58rem 0.75rem;
+  font-size: 0.94rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.fighter-picker-trigger:hover {
+  border-color: rgba(56, 189, 248, 0.75);
+}
+
+.fighter-picker-meta {
+  color: #9bb1d8;
+  font-size: 0.8rem;
+}
+
+.fighter-picker-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 60;
+  border-radius: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.55);
+  background: rgba(8, 14, 28, 0.98);
+  box-shadow: 0 20px 44px rgba(2, 6, 16, 0.75);
+  padding: 0.5rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.fighter-picker-search {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(6, 10, 20, 0.95);
+  color: #ffffff;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.88rem;
+}
+
+.fighter-picker-list {
+  max-height: 260px;
+  overflow-y: auto;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.fighter-picker-option {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.48rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #e2e8f0;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.88rem;
+}
+
+.fighter-picker-option:hover,
+.fighter-picker-option.active {
+  background: rgba(56, 189, 248, 0.16);
+  border-color: rgba(56, 189, 248, 0.5);
+  color: #ffffff;
+}
+
+.fighter-picker-option small {
+  color: #9bb1d8;
+  font-size: 0.74rem;
+  white-space: nowrap;
+}
+
+.fighter-picker-empty {
+  padding: 0.5rem;
+  font-size: 0.85rem;
+}
+
 
