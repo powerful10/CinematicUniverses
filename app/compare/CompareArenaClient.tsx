@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import AdBanner from "@/app/components/ads/AdBanner";
 import ShareButton from "@/app/components/characters/ShareButton";
@@ -48,7 +48,58 @@ function totalScore(c: CompareCharacter): number {
   );
 }
 
+function computeWinProbability(a: CompareCharacter, b: CompareCharacter): { pctA: number; pctB: number } {
+  const sA = totalScore(a);
+  const sB = totalScore(b);
+  const diff = sA - sB;
+  // Smooth logistic curve capped between 8% and 92% so every matchup feels realistic
+  const raw = 1 / (1 + Math.exp(-diff / 42));
+  const pctA = Math.min(92, Math.max(8, Math.round(raw * 100)));
+  return { pctA, pctB: 100 - pctA };
+}
+
+function buildFightAnalysis(a: CompareCharacter, b: CompareCharacter) {
+  const meleeA = a.stats.strength * 0.45 + a.stats.combat * 0.4 + a.stats.durability * 0.15;
+  const meleeB = b.stats.strength * 0.45 + b.stats.combat * 0.4 + b.stats.durability * 0.15;
+  const meleeWinner = meleeA >= meleeB ? a : b;
+
+  const prepA = a.stats.intelligence * 0.65 + a.stats.power * 0.35;
+  const prepB = b.stats.intelligence * 0.65 + b.stats.power * 0.35;
+  const prepWinner = prepA >= prepB ? a : b;
+
+  const survA = a.stats.durability * 0.6 + a.stats.speed * 0.4;
+  const survB = b.stats.durability * 0.6 + b.stats.speed * 0.4;
+  const survWinner = survA >= survB ? a : b;
+
+  const abilityA = a.abilities[0] || "signature combat style";
+  const abilityB = b.abilities[0] || "signature combat style";
+
+  return [
+    {
+      title: "Close-Quarters & Physical Clash",
+      winner: meleeWinner.name,
+      detail: `${meleeWinner.name} holds the edge in hand-to-hand exchanges (Strength ${meleeWinner.stats.strength}, Combat ${meleeWinner.stats.combat}).`,
+    },
+    {
+      title: "Tactical & Power Advantage",
+      winner: prepWinner.name,
+      detail: `${prepWinner.name} leads in battle IQ and energy/ability output (Intelligence ${prepWinner.stats.intelligence}, Power ${prepWinner.stats.power}).`,
+    },
+    {
+      title: "Survival & Endurance Odds",
+      winner: survWinner.name,
+      detail: `${survWinner.name} has higher survivability under sustained pressure (Durability ${survWinner.stats.durability}, Speed ${survWinner.stats.speed}).`,
+    },
+    {
+      title: "Key Deciding Factor",
+      winner: `${a.name} vs ${b.name}`,
+      detail: `If ${a.name} leverages ${abilityA}, it forces ${b.name} to rely on ${abilityB} to turn the tide.`,
+    },
+  ];
+}
+
 const presets: Array<{ label: string; a: string; b: string }> = [
+  { label: "Hulk vs Red Hulk", a: "hulk", b: "red-hulk" },
   { label: "Iron Man vs Batman", a: "iron-man", b: "batman" },
   { label: "Thanos vs Darkseid", a: "thanos", b: "darkseid" },
   { label: "Thor vs Superman", a: "thor", b: "superman" },
@@ -65,6 +116,25 @@ export default function CompareArenaClient({ characters }: { characters: Compare
   const [idA, setIdA] = useState(defaultA?.id || "");
   const [idB, setIdB] = useState(defaultB?.id || "");
 
+  // Sync from URL query params (?a=...&b=...) on mount
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const qa = params.get("a");
+    const qb = params.get("b");
+    if (qa && characters.some((c) => c.id === qa)) setIdA(qa);
+    if (qb && characters.some((c) => c.id === qb)) setIdB(qb);
+  }, [characters]);
+
+  // Keep URL updated for instant sharing
+  useEffect(() => {
+    if (typeof window === "undefined" || !idA || !idB) return;
+    const url = new URL(window.location.href);
+    url.searchParams.set("a", idA);
+    url.searchParams.set("b", idB);
+    window.history.replaceState({}, "", url.toString());
+  }, [idA, idB]);
+
   const charA = useMemo(
     () => characters.find((c) => c.id === idA) || defaultA,
     [characters, idA, defaultA]
@@ -78,11 +148,17 @@ export default function CompareArenaClient({ characters }: { characters: Compare
 
   const scoreA = totalScore(charA);
   const scoreB = totalScore(charB);
+  const { pctA, pctB } = computeWinProbability(charA, charB);
   const winner = scoreA === scoreB ? null : scoreA > scoreB ? charA : charB;
+  const fightAnalysis = buildFightAnalysis(charA, charB);
 
   const applyPreset = (aKey: string, bKey: string) => {
-    const foundA = characters.find((c) => c.id.toLowerCase().includes(aKey));
-    const foundB = characters.find((c) => c.id.toLowerCase().includes(bKey));
+    const foundA =
+      characters.find((c) => c.id.toLowerCase() === aKey) ||
+      characters.find((c) => c.id.toLowerCase().includes(aKey));
+    const foundB =
+      characters.find((c) => c.id.toLowerCase() === bKey) ||
+      characters.find((c) => c.id.toLowerCase().includes(bKey));
     if (foundA) setIdA(foundA.id);
     if (foundB) setIdB(foundB.id);
   };
@@ -133,11 +209,26 @@ export default function CompareArenaClient({ characters }: { characters: Compare
         </div>
       </section>
 
+      <section className="section-surface compare-odds-banner">
+        <div className="compare-odds-labels">
+          <span>
+            <strong>{charA.name}</strong> Win Chance: <strong>{pctA}%</strong>
+          </span>
+          <span>
+            <strong>{charB.name}</strong> Win Chance: <strong>{pctB}%</strong>
+          </span>
+        </div>
+        <div className="compare-odds-track" role="img" aria-label={`Win probability ${pctA}% vs ${pctB}%`}>
+          <div className="compare-odds-fill-a" style={{ width: `${pctA}%` }} />
+          <div className="compare-odds-fill-b" style={{ width: `${pctB}%` }} />
+        </div>
+      </section>
+
       <section className="compare-fighters-grid">
         {[
-          { char: charA, score: scoreA },
-          { char: charB, score: scoreB },
-        ].map(({ char, score }, idx) => (
+          { char: charA, score: scoreA, pct: pctA },
+          { char: charB, score: scoreB, pct: pctB },
+        ].map(({ char, score, pct }, idx) => (
           <article key={`fighter-card-${idx}-${char.id}`} className="section-surface compare-fighter-card">
             <div className="compare-fighter-media">
               <Image
@@ -149,7 +240,7 @@ export default function CompareArenaClient({ characters }: { characters: Compare
             </div>
             <div className="compare-fighter-info">
               <p className="profile-kicker">
-                {char.universe.toUpperCase()} • {char.alignment}
+                {char.universe.toUpperCase()} • {char.alignment} • {pct}% Odds
               </p>
               <h2>{char.name}</h2>
               {char.alias ? <p className="character-card-alias">{char.alias}</p> : null}
@@ -173,14 +264,14 @@ export default function CompareArenaClient({ characters }: { characters: Compare
             <p className="eyebrow">Stat-by-Stat Verdict</p>
             <h2>
               {winner
-                ? `${winner.name} Leads (${Math.max(scoreA, scoreB)} vs ${Math.min(scoreA, scoreB)})`
-                : `Even Matchup (${scoreA} vs ${scoreB})`}
+                ? `${winner.name} Wins (${Math.max(pctA, pctB)}% Survival & Win Chance)`
+                : `50% / 50% Dead-Even Matchup (${scoreA} vs ${scoreB})`}
             </h2>
           </div>
           <ShareButton
-            title={`${charA.name} vs ${charB.name} — Cinematic Universes`}
-            text={`Check out ${charA.name} (${scoreA}) vs ${charB.name} (${scoreB}) on Cinematic Universes!`}
-            label="Share Battle"
+            title={`${charA.name} vs ${charB.name} (${pctA}% vs ${pctB}%) — Cinematic Universes`}
+            text={`Who wins in a fight: ${charA.name} (${pctA}%) or ${charB.name} (${pctB}%)? Check the full breakdown!`}
+            label="Share Battle Link"
             className="pill-link"
           />
         </div>
@@ -207,6 +298,20 @@ export default function CompareArenaClient({ characters }: { characters: Compare
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section className="section-surface">
+        <p className="eyebrow">Tactical Simulation</p>
+        <h2 style={{ marginBottom: "0.8rem" }}>How the Fight Plays Out</h2>
+        <div className="faq-grid">
+          {fightAnalysis.map((item) => (
+            <article key={item.title} className="faq-card">
+              <h3>{item.title}</h3>
+              <p className="profile-kicker" style={{ marginBottom: "0.2rem" }}>Edge: {item.winner}</p>
+              <p>{item.detail}</p>
+            </article>
+          ))}
         </div>
       </section>
 

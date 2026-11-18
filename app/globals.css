@@ -1420,4 +1420,37 @@ a {
   }
 }
 
+.compare-odds-banner {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.compare-odds-labels {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+}
+
+.compare-odds-track {
+  height: 14px;
+  border-radius: 999px;
+  overflow: hidden;
+  display: flex;
+  background: rgba(148, 163, 184, 0.16);
+}
+
+.compare-odds-fill-a {
+  height: 100%;
+  background: linear-gradient(90deg, #0284c7, #38bdf8);
+  transition: width 0.35s ease;
+}
+
+.compare-odds-fill-b {
+  height: 100%;
+  background: linear-gradient(90deg, #f97316, #f43f5e);
+  transition: width 0.35s ease;
+}
+
 
