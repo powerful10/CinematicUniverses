@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import AdBanner from "@/app/components/ads/AdBanner";
 import CharacterCard from "@/app/components/characters/CharacterCard";
+import ShareButton from "@/app/components/characters/ShareButton";
 import type { CharacterRecord, Faction, Universe } from "@/app/data/characters";
 import { factionLabel, getCharacterRoute, getRelatedCharacters } from "@/app/data/characters";
 import { withBasePath } from "@/app/lib/basePath";
@@ -184,6 +185,11 @@ export default function CharacterProfile({ character }: CharacterProfileProps) {
                 {link.label}
               </Link>
             ))}
+            <ShareButton
+              title={`${character.name} — Cinematic Universes`}
+              text={`Check out ${character.name}'s powers, stats, and dossier on Cinematic Universes!`}
+              label="Share Profile"
+            />
           </div>
         </div>
       </div>

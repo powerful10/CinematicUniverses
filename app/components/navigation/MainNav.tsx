@@ -6,12 +6,13 @@ import { useState } from "react";
 
 const links = [
   { href: "/", label: "Home" },
+  { href: "/mcu/timeline", label: "Watch Order" },
+  { href: "/versus", label: "Versus & Quiz" },
+  { href: "/compare", label: "Stat Compare" },
   { href: "/mcu", label: "MCU" },
   { href: "/dc", label: "DC" },
   { href: "/mcu/heroes", label: "MCU Heroes" },
-  { href: "/mcu/villains", label: "MCU Villains" },
   { href: "/dc/heroes", label: "DC Heroes" },
-  { href: "/dc/villains", label: "DC Villains" },
   { href: "/coverage", label: "Coverage" },
 ];
 

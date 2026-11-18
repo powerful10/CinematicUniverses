@@ -1276,3 +1276,148 @@ a {
   }
 }
 
+/* Compare Battle Arena */
+.compare-arena {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.compare-presets {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.compare-preset-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.compare-selectors {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: end;
+}
+
+.compare-vs-badge {
+  font-family: var(--font-display), serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fed7aa;
+  background: rgba(249, 115, 22, 0.22);
+  border: 1px solid rgba(249, 115, 22, 0.65);
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  align-self: center;
+}
+
+.compare-fighters-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.compare-fighter-card {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.compare-fighter-media {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(158, 176, 208, 0.28);
+  aspect-ratio: 3 / 4;
+  background: #0b1220;
+}
+
+.compare-fighter-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.compare-total-score {
+  margin-top: 0.35rem;
+  color: #e8efff;
+}
+
+.compare-verdict-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.compare-stat-rows {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.compare-stat-head {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  align-items: center;
+  text-align: center;
+  font-size: 0.86rem;
+  margin-bottom: 0.25rem;
+}
+
+.compare-stat-head strong {
+  color: #9bb1d8;
+}
+
+.compare-stat-head strong.stat-win {
+  color: #fb923c;
+}
+
+.compare-dual-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+}
+
+.compare-bar-left,
+.compare-bar-right {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.2);
+  overflow: hidden;
+  display: flex;
+}
+
+.compare-bar-left {
+  justify-content: flex-end;
+}
+
+.compare-bar-left span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  border-radius: inherit;
+}
+
+.compare-bar-right span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #fb923c, #f43f5e);
+  border-radius: inherit;
+}
+
+@media (max-width: 820px) {
+  .compare-selectors,
+  .compare-fighters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-fighter-card {
+    grid-template-columns: 110px minmax(0, 1fr);
+  }
+}
+
+

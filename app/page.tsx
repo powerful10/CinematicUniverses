@@ -154,6 +154,9 @@ export default function HomePage() {
           <Link href="/mcu/timeline" className="pill-link muted">
             MCU Timeline
           </Link>
+          <Link href="/compare" className="pill-link muted">
+            ⚔ Compare Characters
+          </Link>
         </div>
       </section>
 
