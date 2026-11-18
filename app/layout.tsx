@@ -100,12 +100,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://n6wxm.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://nap5k.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://3nbf4.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5266296505652960"
-          crossOrigin="anonymous"
+          src="https://www.googletagmanager.com/gtag/js?id=G-300M7END31"
         ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-300M7END31', { send_page_view: true });`,
+          }}
+        />
       </head>
       <body className={`${display.variable} ${body.variable}`}>
         <MonetagAds />

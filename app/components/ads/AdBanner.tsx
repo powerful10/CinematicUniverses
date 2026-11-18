@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 type AdBannerProps = {
@@ -8,6 +10,12 @@ type AdBannerProps = {
   className?: string;
 };
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 const MONETAG_DIRECT_LINK = "https://uplcm.com/4/12193075";
 
 export default function AdBanner({
@@ -17,6 +25,20 @@ export default function AdBanner({
   ctaText = "Explore Partner Offer →",
   className = "",
 }: AdBannerProps) {
+  const handleClick = () => {
+    try {
+      if (typeof window !== "undefined" && typeof window.gtag === "function") {
+        window.gtag("event", "monetag_direct_link_click", {
+          event_category: "monetization",
+          event_label: label,
+          zone_id: "12193075",
+        });
+      }
+    } catch {
+      // Ignore analytics errors
+    }
+  };
+
   return (
     <aside className={`ad-slot-surface ${className}`.trim()} aria-label={label}>
       <a
@@ -24,6 +46,7 @@ export default function AdBanner({
         target="_blank"
         rel="noopener noreferrer sponsored"
         className="direct-link-promo"
+        onClick={handleClick}
       >
         <div className="direct-link-content">
           <div className="direct-link-BadgeRow">
