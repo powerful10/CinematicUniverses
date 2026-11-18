@@ -3,7 +3,6 @@ import { Cinzel, Source_Sans_3 } from "next/font/google";
 import Link from "next/link";
 
 import MainNav from "@/app/components/navigation/MainNav";
-import MonetagAds from "@/app/components/ads/MonetagAds";
 import { withBasePath } from "@/app/lib/basePath";
 import { absoluteAssetUrl, absoluteUrl, getSiteUrl } from "@/app/lib/seo";
 import { coreSeoKeywords, mergeKeywords } from "@/app/lib/seoKeywords";
@@ -97,9 +96,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://n6wxm.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://nap5k.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://3nbf4.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <script
           async
@@ -115,7 +111,6 @@ gtag('config', 'G-300M7END31', { send_page_view: true });`,
         />
       </head>
       <body className={`${display.variable} ${body.variable}`}>
-        <MonetagAds />
         <div className="app-bg-overlay" aria-hidden="true" />
         <MainNav />
 
