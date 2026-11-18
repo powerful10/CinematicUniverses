@@ -110,88 +110,187 @@ function FighterPicker({
 }) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
+  const [filterUniverse, setFilterUniverse] = useState<"all" | "mcu" | "dc">("all");
+  const [filterFaction, setFilterFaction] = useState<"all" | "heroes" | "villains" | "antiheroes">("all");
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const onDocClick = (e: MouseEvent) => {
-      if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
+    if (!open) return;
+
+    const onDocClick = (e: MouseEvent | TouchEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (!target) return;
+      if (containerRef.current && containerRef.current.contains(target)) {
+        return;
+      }
+      setOpen(false);
+    };
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
         setOpen(false);
       }
     };
-    document.addEventListener("mousedown", onDocClick);
-    return () => document.removeEventListener("mousedown", onDocClick);
-  }, []);
+
+    // Use click and touchstart rather than mousedown so scrollbar dragging doesn't prematurely trigger close
+    const timer = setTimeout(() => {
+      document.addEventListener("click", onDocClick);
+      document.addEventListener("keydown", onKeyDown);
+    }, 10);
+
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("click", onDocClick);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
-    if (!q) return characters;
-    return characters.filter(
-      (c) =>
+    return characters.filter((c) => {
+      if (filterUniverse !== "all" && c.universe !== filterUniverse) return false;
+      if (filterFaction !== "all" && c.faction !== filterFaction) return false;
+      if (!q) return true;
+      return (
         c.name.toLowerCase().includes(q) ||
         (c.alias || "").toLowerCase().includes(q) ||
         c.universe.toLowerCase().includes(q) ||
         c.faction.toLowerCase().includes(q)
-    );
-  }, [characters, search]);
+      );
+    });
+  }, [characters, search, filterUniverse, filterFaction]);
 
   return (
-    <div className="fighter-picker" ref={containerRef}>
+    <div className={`fighter-picker ${open ? "is-open" : ""}`} ref={containerRef}>
       <span className="fighter-picker-label">{label}</span>
       <button
         type="button"
         className="fighter-picker-trigger"
-        onClick={(e) => {
-          e.stopPropagation();
-          setOpen((prev) => !prev);
-        }}
+        onClick={() => setOpen((prev) => !prev)}
         aria-expanded={open}
+        aria-haspopup="listbox"
       >
         <span>
-          {selected.name}{" "}
+          <strong>{selected.name}</strong>{" "}
           <small className="fighter-picker-meta">
             ({selected.universe.toUpperCase()} • {selected.faction})
           </small>
         </span>
-        <span aria-hidden="true">{open ? "▲" : "▼"}</span>
+        <span className="fighter-picker-chevron" aria-hidden="true">{open ? "▲" : "▼"}</span>
       </button>
 
       {open && (
-        <div className="fighter-picker-dropdown" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="fighter-picker-dropdown"
+          onClick={(e) => e.stopPropagation()}
+          onMouseDown={(e) => e.stopPropagation()}
+        >
+          <div className="fighter-picker-header">
+            <span className="fighter-picker-title">
+              Choose Character ({filtered.length} found)
+            </span>
+            <button
+              type="button"
+              className="fighter-picker-close"
+              onClick={() => setOpen(false)}
+              aria-label="Close picker"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div className="fighter-picker-filters">
+            <div className="fighter-picker-chips">
+              <button
+                type="button"
+                className={`picker-chip ${filterUniverse === "all" ? "active" : ""}`}
+                onClick={() => setFilterUniverse("all")}
+              >
+                All Universes
+              </button>
+              <button
+                type="button"
+                className={`picker-chip ${filterUniverse === "mcu" ? "active" : ""}`}
+                onClick={() => setFilterUniverse("mcu")}
+              >
+                Marvel (MCU)
+              </button>
+              <button
+                type="button"
+                className={`picker-chip ${filterUniverse === "dc" ? "active" : ""}`}
+                onClick={() => setFilterUniverse("dc")}
+              >
+                DC Comics
+              </button>
+            </div>
+            <div className="fighter-picker-chips">
+              <button
+                type="button"
+                className={`picker-chip ${filterFaction === "all" ? "active" : ""}`}
+                onClick={() => setFilterFaction("all")}
+              >
+                All Types
+              </button>
+              <button
+                type="button"
+                className={`picker-chip ${filterFaction === "heroes" ? "active" : ""}`}
+                onClick={() => setFilterFaction("heroes")}
+              >
+                Heroes
+              </button>
+              <button
+                type="button"
+                className={`picker-chip ${filterFaction === "villains" ? "active" : ""}`}
+                onClick={() => setFilterFaction("villains")}
+              >
+                Villains
+              </button>
+              <button
+                type="button"
+                className={`picker-chip ${filterFaction === "antiheroes" ? "active" : ""}`}
+                onClick={() => setFilterFaction("antiheroes")}
+              >
+                Antiheroes
+              </button>
+            </div>
+          </div>
+
           <input
             type="search"
             className="fighter-picker-search"
-            placeholder="Type to filter heroes, villains, antiheroes..."
+            placeholder="Search by name (e.g. Hulk, Batman, Red Hulk, Joker)..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            autoFocus
           />
+
           <div className="fighter-picker-list" role="listbox">
             {filtered.length > 0 ? (
-              filtered.map((c) => (
-                <button
-                  key={`${label}-${c.universe}-${c.id}`}
-                  type="button"
-                  role="option"
-                  aria-selected={c.id === selected.id}
-                  className={
-                    c.id === selected.id
-                      ? "fighter-picker-option active"
-                      : "fighter-picker-option"
-                  }
-                  onClick={() => {
-                    onSelect(c.id);
-                    setOpen(false);
-                    setSearch("");
-                  }}
-                >
-                  <span>{c.name}</span>
-                  <small>
-                    {c.universe.toUpperCase()} • {c.faction}
-                  </small>
-                </button>
-              ))
+              filtered.map((c) => {
+                const isSelected = c.id === selected.id;
+                return (
+                  <button
+                    key={`${label}-${c.universe}-${c.id}`}
+                    type="button"
+                    role="option"
+                    aria-selected={isSelected}
+                    className={`fighter-picker-option ${isSelected ? "active" : ""}`}
+                    onClick={() => {
+                      onSelect(c.id);
+                      setOpen(false);
+                      setSearch("");
+                    }}
+                  >
+                    <span className="fighter-picker-option-name">{c.name}</span>
+                    <span className="fighter-picker-option-meta">
+                      {c.universe.toUpperCase()} • {c.faction}
+                    </span>
+                  </button>
+                );
+              })
             ) : (
-              <p className="fighter-picker-empty">No matches for &ldquo;{search}&rdquo;</p>
+              <p className="fighter-picker-empty">
+                No fighters match &ldquo;{search}&rdquo; with current filters.
+              </p>
             )}
           </div>
         </div>
@@ -201,15 +300,17 @@ function FighterPicker({
 }
 
 const presets: Array<{ label: string; a: string; b: string }> = [
-  { label: "Hulk vs Red Hulk", a: "hulk", b: "red-hulk" },
-  { label: "Iron Man vs Batman", a: "iron-man", b: "batman" },
-  { label: "Thanos vs Darkseid", a: "thanos", b: "darkseid" },
-  { label: "Thor vs Superman", a: "thor", b: "superman" },
-  { label: "Spider-Man vs Flash", a: "spider-man", b: "flash" },
+  { label: "Hulk vs Red Hulk", a: "Hulk", b: "RedHulk" },
+  { label: "Iron Man vs Batman", a: "IronMan", b: "Batman" },
+  { label: "Thanos vs Darkseid", a: "Thanos", b: "Darkseid" },
+  { label: "Thor vs Superman", a: "Thor", b: "Superman" },
+  { label: "Spider-Man vs Flash", a: "SpiderMan", b: "Flash" },
+  { label: "Wolverine vs Deathstroke", a: "Wolverine", b: "Deathstroke" },
+  { label: "Doctor Strange vs Doctor Fate", a: "DoctorStrange", b: "DoctorFate" },
 ];
 
 export default function CompareArenaClient({ characters }: { characters: CompareCharacter[] }) {
-  const defaultA = characters.find((c) => c.id.toLowerCase().includes("iron-man")) || characters[0];
+  const defaultA = characters.find((c) => c.id.toLowerCase().includes("ironman")) || characters[0];
   const defaultB =
     characters.find((c) => c.id.toLowerCase().includes("batman")) ||
     characters.find((c) => c.universe === "dc") ||
@@ -253,12 +354,15 @@ export default function CompareArenaClient({ characters }: { characters: Compare
   const fightAnalysis = buildFightAnalysis(charA, charB);
 
   const applyPreset = (aKey: string, bKey: string) => {
+    const clean = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+    const targetA = clean(aKey);
+    const targetB = clean(bKey);
     const foundA =
-      characters.find((c) => c.id.toLowerCase() === aKey) ||
-      characters.find((c) => c.id.toLowerCase().includes(aKey));
+      characters.find((c) => clean(c.id) === targetA || clean(c.name) === targetA) ||
+      characters.find((c) => clean(c.id).includes(targetA) || clean(c.name).includes(targetA));
     const foundB =
-      characters.find((c) => c.id.toLowerCase() === bKey) ||
-      characters.find((c) => c.id.toLowerCase().includes(bKey));
+      characters.find((c) => clean(c.id) === targetB || clean(c.name) === targetB) ||
+      characters.find((c) => clean(c.id).includes(targetB) || clean(c.name).includes(targetB));
     if (foundA) setIdA(foundA.id);
     if (foundB) setIdB(foundB.id);
   };

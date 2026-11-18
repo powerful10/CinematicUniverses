@@ -1460,11 +1460,16 @@ a {
   gap: 0.35rem;
 }
 
+.fighter-picker.is-open {
+  z-index: 90;
+}
+
 .fighter-picker-label {
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #9bb1d8;
+  font-weight: 600;
 }
 
 .fighter-picker-trigger {
@@ -1475,36 +1480,115 @@ a {
   gap: 0.5rem;
   border-radius: 10px;
   border: 1px solid rgba(159, 184, 234, 0.35);
-  background: rgba(7, 13, 24, 0.9);
+  background: rgba(7, 13, 24, 0.94);
   color: #e8f0ff;
-  padding: 0.58rem 0.75rem;
-  font-size: 0.94rem;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.95rem;
   cursor: pointer;
   text-align: left;
+  transition: all 0.2s ease;
 }
 
-.fighter-picker-trigger:hover {
-  border-color: rgba(56, 189, 248, 0.75);
+.fighter-picker-trigger:hover,
+.fighter-picker.is-open .fighter-picker-trigger {
+  border-color: rgba(56, 189, 248, 0.8);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.15);
 }
 
 .fighter-picker-meta {
   color: #9bb1d8;
   font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.fighter-picker-chevron {
+  font-size: 0.75rem;
+  color: #9bb1d8;
 }
 
 .fighter-picker-dropdown {
   position: absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + 8px);
   left: 0;
   right: 0;
-  z-index: 60;
-  border-radius: 12px;
+  z-index: 100;
+  border-radius: 14px;
   border: 1px solid rgba(56, 189, 248, 0.55);
-  background: rgba(8, 14, 28, 0.98);
-  box-shadow: 0 20px 44px rgba(2, 6, 16, 0.75);
-  padding: 0.5rem;
+  background: rgba(8, 14, 28, 0.99);
+  box-shadow: 0 24px 50px rgba(1, 4, 12, 0.85);
+  padding: 0.75rem;
   display: grid;
-  gap: 0.45rem;
+  gap: 0.55rem;
+  backdrop-filter: blur(16px);
+}
+
+.fighter-picker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.fighter-picker-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #e0e9fa;
+  letter-spacing: 0.04em;
+}
+
+.fighter-picker-close {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  border-radius: 6px;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.fighter-picker-close:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.5);
+  color: #fca5a5;
+}
+
+.fighter-picker-filters {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.fighter-picker-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.picker-chip {
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.6);
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.picker-chip:hover {
+  color: #ffffff;
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.picker-chip.active {
+  background: rgba(56, 189, 248, 0.22);
+  border-color: rgba(56, 189, 248, 0.75);
+  color: #e0f2fe;
 }
 
 .fighter-picker-search {
@@ -1513,15 +1597,31 @@ a {
   border: 1px solid rgba(148, 163, 184, 0.35);
   background: rgba(6, 10, 20, 0.95);
   color: #ffffff;
-  padding: 0.45rem 0.65rem;
+  padding: 0.5rem 0.75rem;
   font-size: 0.88rem;
+  outline: none;
+}
+
+.fighter-picker-search:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
 }
 
 .fighter-picker-list {
-  max-height: 260px;
+  max-height: 270px;
   overflow-y: auto;
   display: grid;
   gap: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.fighter-picker-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.fighter-picker-list::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 3px;
 }
 
 .fighter-picker-option {
@@ -1530,7 +1630,7 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.48rem 0.65rem;
+  padding: 0.52rem 0.7rem;
   border-radius: 8px;
   border: 1px solid transparent;
   background: transparent;
@@ -1538,6 +1638,7 @@ a {
   cursor: pointer;
   text-align: left;
   font-size: 0.88rem;
+  transition: background 0.12s ease;
 }
 
 .fighter-picker-option:hover,
@@ -1547,15 +1648,21 @@ a {
   color: #ffffff;
 }
 
-.fighter-picker-option small {
+.fighter-picker-option-name {
+  font-weight: 600;
+}
+
+.fighter-picker-option-meta {
   color: #9bb1d8;
   font-size: 0.74rem;
   white-space: nowrap;
 }
 
 .fighter-picker-empty {
-  padding: 0.5rem;
+  padding: 0.75rem;
   font-size: 0.85rem;
+  color: #94a3b8;
+  text-align: center;
 }
 
 

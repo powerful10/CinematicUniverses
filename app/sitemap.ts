@@ -11,6 +11,7 @@ const factions: Faction[] = ["heroes", "villains", "antiheroes"];
 
 const staticRoutes = [
   "/",
+  "/compare",
   "/versus",
   "/about",
   "/contact",

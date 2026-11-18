@@ -16,7 +16,7 @@ declare global {
   }
 }
 
-const MONETAG_DIRECT_LINK = "https://uplcm.com/4/12193075";
+const MONETAG_DIRECT_LINK = "https://uplcm.com/4/10668106";
 
 export default function AdBanner({
   label = "Sponsored Spotlight",

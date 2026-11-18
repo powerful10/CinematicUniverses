@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-02-07T12:32:32.466Z",
+  "updatedAt": "2026-11-18T11:16:43.783Z",
   "universes": {
     "mcu": {
       "heroes": [
@@ -3481,6 +3481,774 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Fantastic_Four%3A_Rise_of_the_Silver_Surfer",
           "sourceTitle": "Fantastic Four: Rise of the Silver Surfer",
           "sourceDescription": "2007 film by Tim Story"
+        },
+        {
+          "id": "MilesMorales",
+          "name": "Spider-Man (Miles Morales)",
+          "alias": "Miles Morales",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "Miles Morales is a Brooklyn teenager bitten by a genetically engineered spider, gaining classic spider-abilities alongside unique bio-electric Venom Blasts and camouflage invisibility. He stepped up following Peter Parker's legacy to protect both New York and the broader multiverse.",
+          "alignment": "Heroic",
+          "status": "Active / Multiversal Champion",
+          "debut": null,
+          "fullName": "Miles Gonzalo Morales",
+          "occupation": "Adventurer / Defender",
+          "placeOfBirth": "-",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "Ultimate Fallout #4 (August, 2011)",
+          "affiliations": [
+            "Champions",
+            "Avengers",
+            "Spider-Army",
+            "Web-Warriors"
+          ],
+          "abilities": [
+            "Wall-crawling & Spider-Sense",
+            "Bio-Electric Venom Blast",
+            "Spider-Camouflage Invisibility",
+            "Superhuman Agility & Reflexes",
+            "Tactical Acrobatic Combat",
+            "Web-Shooter Mastery"
+          ],
+          "keyMoments": [
+            "Took up the mantle of Spider-Man in Brooklyn after witnessing Peter Parker fall in battle.",
+            "Mastered his signature Venom Strike and bio-camouflage during the Spider-Verse crisis.",
+            "Anchored the Champions and defended the Marvel multiverse across alternate realities."
+          ],
+          "stats": {
+            "intelligence": 75,
+            "strength": 72,
+            "speed": 82,
+            "durability": 70,
+            "power": 85,
+            "combat": 80
+          },
+          "image": "/media/mcu/heroes/MilesMorales.svg",
+          "imageSource": "placeholder",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Miles_Morales",
+          "sourceTitle": "Miles Morales",
+          "sourceDescription": "Spider-Man (Miles Morales) in Marvel Universe"
+        },
+        {
+          "id": "SpiderGwen",
+          "name": "Spider-Gwen",
+          "alias": "Ghost-Spider / Gwen Stacy",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "On Earth-65, Gwen Stacy was bitten by a radioactive spider instead of Peter Parker. Blending punk-rock rhythm, high agility, and dimensional travel wrist-devices, Ghost-Spider fights crime across multiple realities while maintaining her fiercely independent spirit.",
+          "alignment": "Heroic",
+          "status": "Active / Multiverse Traveler",
+          "debut": null,
+          "fullName": "Gwendolyne Maxine Stacy",
+          "occupation": "-",
+          "placeOfBirth": "-",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "Edge of Spider-Verse #2 (September, 2014)",
+          "affiliations": [
+            "Web-Warriors",
+            "Spider-Army",
+            "The Mary Janes",
+            "Secret Warriors"
+          ],
+          "abilities": [
+            "Superhuman Agility & Reflexes",
+            "Wall-crawling & Precognitive Spider-Sense",
+            "Dimension-Hopping Tech",
+            "Acrobatic Combat Rhythms",
+            "Synthetic Web-Fluid Mechanics",
+            "Tactical Street Combat"
+          ],
+          "keyMoments": [
+            "Bitten by radioactive spider on Earth-65 and formed the superhero identity Spider-Woman.",
+            "United with the Spider-Army to defeat the Inheritors across multiversal timelines.",
+            "Adopted the codename Ghost-Spider while defending parallel Earth realities."
+          ],
+          "stats": {
+            "intelligence": 72,
+            "strength": 68,
+            "speed": 80,
+            "durability": 68,
+            "power": 74,
+            "combat": 78
+          },
+          "image": "/media/mcu/heroes/SpiderGwen.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Spider-Gwen",
+          "sourceTitle": "Spider-Gwen",
+          "sourceDescription": "Spider-Gwen in Marvel Universe"
+        },
+        {
+          "id": "Nova",
+          "name": "Nova",
+          "alias": "Human Rocket / Richard Rider",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "Chosen by dying alien Rhomann Dey, Richard Rider was empowered with the boundless Nova Force of Xandar. Transforming into the Human Rocket, Nova became the foremost guardian against cosmic threats like the Annihilation Wave.",
+          "alignment": "Heroic",
+          "status": "Active Cosmic Centurion",
+          "debut": null,
+          "fullName": "Richard Rider",
+          "occupation": "-",
+          "placeOfBirth": "-",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The Man Called Nova #1 (September, 1976)",
+          "affiliations": [
+            "Nova Corps",
+            "Guardians of the Galaxy",
+            "New Warriors",
+            "Secret Avengers"
+          ],
+          "abilities": [
+            "Nova Force Manipulation",
+            "Near-Light Cosmic Flight",
+            "Superhuman Strength & Invulnerability",
+            "Gravimetric Energy Beams",
+            "Xandarian Worldmind Tactical Link",
+            "Cosmic Survival"
+          ],
+          "keyMoments": [
+            "Empowered with Nova Centurion rank and defended Earth from intergalactic raiders.",
+            "Absorbed the entire Xandarian Worldmind during the Annihilation Wave invasion.",
+            "Held the Cancerverse line alongside the Guardians of the Galaxy."
+          ],
+          "stats": {
+            "intelligence": 70,
+            "strength": 88,
+            "speed": 92,
+            "durability": 88,
+            "power": 90,
+            "combat": 82
+          },
+          "image": "/media/mcu/heroes/Nova.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nova_(Richard_Rider)",
+          "sourceTitle": "Nova (Richard Rider)",
+          "sourceDescription": "Nova in Marvel Universe"
+        },
+        {
+          "id": "Sentry",
+          "name": "Sentry",
+          "alias": "The Golden Guardian / Robert Reynolds",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "Empowered by a perfected Super Soldier serum giving him the power of one million exploding suns, the Sentry is one of Marvel's most potent beings. However, his power is perpetually shadowed by the Void, a cosmic manifestation of his darker nature.",
+          "alignment": "Heroic",
+          "status": "Variable / Cosmic Paragon",
+          "debut": null,
+          "fullName": "Robert Reynolds",
+          "occupation": "-",
+          "placeOfBirth": "-",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The Sentry #1 (September, 2000)",
+          "affiliations": [
+            "Avengers",
+            "Dark Avengers",
+            "Mighty Avengers"
+          ],
+          "abilities": [
+            "Power of a Million Exploding Suns",
+            "Molecular Matter Manipulation",
+            "Limitless Physical Strength",
+            "Light Generation & Energy Blasts",
+            "Nigh-Invulnerability & Immortality",
+            "Hypersonic Flight"
+          ],
+          "keyMoments": [
+            "Defeated the Void by erasing knowledge of his existence from the entire world.",
+            "Joined the New Avengers and stood as Earth's mightiest defensive vanguard.",
+            "Tore Ares in half during the Siege of Asgard before being sacrificed in the sun."
+          ],
+          "stats": {
+            "intelligence": 75,
+            "strength": 100,
+            "speed": 95,
+            "durability": 98,
+            "power": 100,
+            "combat": 85
+          },
+          "image": "/media/mcu/heroes/Sentry.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sentry_(Robert_Reynolds)",
+          "sourceTitle": "Sentry (Robert Reynolds)",
+          "sourceDescription": "Sentry in Marvel Universe"
+        },
+        {
+          "id": "BetaRayBill",
+          "name": "Beta Ray Bill",
+          "alias": "Champion of the Korbinite Race",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "A cyborg champion genetically engineered to protect his displaced people, Beta Ray Bill proved worthy of lifting Thor's hammer Mjolnir. Acknowledging his pure valor, Odin granted him the war hammer Stormbreaker.",
+          "alignment": "Heroic",
+          "status": "Active Cosmic Protector",
+          "debut": null,
+          "fullName": "Beta Ray Bill",
+          "occupation": "Guardian of the Korbinite race",
+          "placeOfBirth": "Burning Galaxy",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "Thor #337 (November, 1983)",
+          "affiliations": [
+            "Thor Corps",
+            "Annihilators",
+            "Star Masters",
+            "Asgardian Allies"
+          ],
+          "abilities": [
+            "Wields Stormbreaker Hammer",
+            "Weather & Lightning Control",
+            "God-Tier Physical Strength",
+            "Interstellar Flight & Space Survivability",
+            "Enhanced Korbinite Cyborg Physiology",
+            "Master Hammer Combatant"
+          ],
+          "keyMoments": [
+            "Lifted Mjolnir in single combat against Thor, proving complete unyielding worthiness.",
+            "Gifted Stormbreaker by Odin and formed an unbreakable brotherhood with Thor.",
+            "Stood on the frontlines of the Annihilation War alongside the Annihilators."
+          ],
+          "stats": {
+            "intelligence": 70,
+            "strength": 95,
+            "speed": 85,
+            "durability": 95,
+            "power": 90,
+            "combat": 88
+          },
+          "image": "/media/mcu/heroes/BetaRayBill.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Beta_Ray_Bill",
+          "sourceTitle": "Beta Ray Bill",
+          "sourceDescription": "Beta Ray Bill in Marvel Universe"
+        },
+        {
+          "id": "BlackBolt",
+          "name": "Black Bolt",
+          "alias": "Midnight King / Blackagar Boltagon",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "Monarch of the Inhumans, Black Bolt's speech triggers electron-disrupting sonic concussions capable of leveling entire cities with a whisper. He rules in stoic silence, leading with profound restraint and devastating cosmic might.",
+          "alignment": "Heroic",
+          "status": "Inhuman Sovereign",
+          "debut": null,
+          "fullName": "Blackagar Boltagon",
+          "occupation": "King of the Inhumans",
+          "placeOfBirth": "Attilan, Atlantic Ocean",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "Fantastic Four #45 (December, 1965)",
+          "affiliations": [
+            "Inhuman Royal Family",
+            "Illuminati",
+            "Universal Inhumans"
+          ],
+          "abilities": [
+            "Quasi-Sonic Destruction Scream",
+            "Electron & Particle Manipulation",
+            "Matter & Energy Channeling",
+            "Flight via Anti-Graviton Field",
+            "Master Martial Artist",
+            "Telepathic Shielding"
+          ],
+          "keyMoments": [
+            "Ascended Attilan's throne and defended his people through the Terrigenesis crisis.",
+            "Joined Marvel's clandestine Illuminati council to neutralize multiversal incursions.",
+            "Detonated the Terrigen Bomb across Earth's atmosphere, awakening new Inhumans."
+          ],
+          "stats": {
+            "intelligence": 82,
+            "strength": 85,
+            "speed": 75,
+            "durability": 90,
+            "power": 98,
+            "combat": 86
+          },
+          "image": "/media/mcu/heroes/BlackBolt.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Black_Bolt",
+          "sourceTitle": "Black Bolt",
+          "sourceDescription": "Black Bolt in Marvel Universe"
+        },
+        {
+          "id": "Medusa",
+          "name": "Medusa",
+          "alias": "Queen of the Inhumans",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "Queen of the Inhumans and voice of her husband Black Bolt, Medusa controls her steel-strong psychokinetic hair with surgical precision. She is a master statesman, fierce battle commander, and steadfast protector of Attilan.",
+          "alignment": "Heroic",
+          "status": "Active Royal Diplomat",
+          "debut": null,
+          "fullName": "Medusalith Amaquelin-Boltagon",
+          "occupation": "Queen, Royal interpreter",
+          "placeOfBirth": "Island of Attilan, Atlantic Ocean",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "Fantastic Four #36 (March, 1965)",
+          "affiliations": [
+            "Inhuman Royal Family",
+            "Fantastic Four",
+            "A-Force",
+            "Frightful Four (formerly)"
+          ],
+          "abilities": [
+            "Psychokinetic Hair Control",
+            "Tensile Strength Exceeding Steel",
+            "Tactical Royal Leadership",
+            "Master Hand-to-Hair Combatant",
+            "Acrobatic Grappling",
+            "Inhuman Physiology"
+          ],
+          "keyMoments": [
+            "Spoke on behalf of Black Bolt to maintain royal governance and diplomatic stability.",
+            "Substituted for the Invisible Woman as an official member of the Fantastic Four.",
+            "Led Inhuman forces against mutant factions during the Terrigen mist conflict."
+          ],
+          "stats": {
+            "intelligence": 75,
+            "strength": 65,
+            "speed": 60,
+            "durability": 70,
+            "power": 75,
+            "combat": 78
+          },
+          "image": "/media/mcu/heroes/Medusa.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Medusa_(Marvel_Comics)",
+          "sourceTitle": "Medusa (Marvel Comics)",
+          "sourceDescription": "Medusa in Marvel Universe"
+        },
+        {
+          "id": "Bishop",
+          "name": "Bishop",
+          "alias": "Lucas Bishop",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "Born in a dystopian 21st-century timeline where Sentinels enslaved mutants, Bishop traveled back in time to avert the disaster. His mutant power enables him to absorb ambient energy and redirect it as devastating concussive blasts.",
+          "alignment": "Heroic",
+          "status": "Active Mutant Security Officer",
+          "debut": null,
+          "fullName": "Lucas Bishop",
+          "occupation": "(current) Adventurer, (former) Commander in the XSE (Xavier's Security Enforcers)",
+          "placeOfBirth": "A mutant relocation camp in an undisclosed location on an alternate 21st Century Earth",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The Uncanny X-Men #282 (November, 1991)",
+          "affiliations": [
+            "X-Men",
+            "XSE (Xavier Security Enforcers)",
+            "War College",
+            "X-Treme X-Men"
+          ],
+          "abilities": [
+            "Energy Absorption & Redirection",
+            "Futuristic Energy Weaponry",
+            "Tactical Warfare Strategy",
+            "Internal Chrono-Spatial Awareness",
+            "Master Marksman & Combatant",
+            "Extreme Pain Tolerance"
+          ],
+          "keyMoments": [
+            "Traveled back in time to stop the traitor who brought down Xavier's dream.",
+            "Served as senior officer in the XSE protecting mutant survival across eras.",
+            "Served on the Krakoan War College training young mutants for planetary defense."
+          ],
+          "stats": {
+            "intelligence": 72,
+            "strength": 70,
+            "speed": 65,
+            "durability": 78,
+            "power": 84,
+            "combat": 85
+          },
+          "image": "/media/mcu/heroes/Bishop.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Bishop_(Marvel_Comics)",
+          "sourceTitle": "Bishop (Marvel Comics)",
+          "sourceDescription": "Bishop in Marvel Universe"
+        },
+        {
+          "id": "Psylocke",
+          "name": "Psylocke",
+          "alias": "Kwannon / Betsy Braddock",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "Psylocke channels raw telepathic and telekinetic energy into razor-sharp psychic blades that slice through mental resistance and physical barriers alike. Combining elite ninja ninjutsu with psionic prowess, she is deadly at any range.",
+          "alignment": "Heroic",
+          "status": "Active X-Men Field Operative",
+          "debut": null,
+          "fullName": "Kwannon / Elizabeth Braddock",
+          "occupation": "Adventurer, formerly a STRIKE operative, fashion model",
+          "placeOfBirth": "Braddock Manor, England",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "New Mutants #45 (November, 1986)",
+          "affiliations": [
+            "X-Men",
+            "X-Force",
+            "Excalibur",
+            "Hellions",
+            "Captain Britain Corps"
+          ],
+          "abilities": [
+            "Psychic Knife & Psionic Katana",
+            "Telepathy & Telekinesis",
+            "Master Ninjutsu & Swordplay",
+            "Stealth Infiltration",
+            "Mental Shields",
+            "Acrobatic Reflexes"
+          ],
+          "keyMoments": [
+            "Operated in X-Force carrying out lethal black-ops assignments to protect mutantkind.",
+            "Reclaimed her singular identity and mastered dual psychic blades in Krakoan combat.",
+            "Led the Hellions team and guided volatile mutants through redemption missions."
+          ],
+          "stats": {
+            "intelligence": 76,
+            "strength": 65,
+            "speed": 72,
+            "durability": 68,
+            "power": 86,
+            "combat": 92
+          },
+          "image": "/media/mcu/heroes/Psylocke.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Psylocke",
+          "sourceTitle": "Psylocke",
+          "sourceDescription": "Psylocke in Marvel Universe"
+        },
+        {
+          "id": "EmmaFrost",
+          "name": "Emma Frost",
+          "alias": "White Queen",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "An Omega-class telepath and former Hellfire Club White Queen, Emma Frost can also shift into an organic diamond form granting near-invulnerability. Shrewd, wealthy, and brilliant, she evolved into a foundational leader of the mutant nation.",
+          "alignment": "Heroic",
+          "status": "Quiet Council Regent",
+          "debut": null,
+          "fullName": "Emma Grace Frost",
+          "occupation": "-",
+          "placeOfBirth": "Boston, Massachusetts",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The Uncanny X-Men #129 (January, 1980)",
+          "affiliations": [
+            "X-Men",
+            "Hellfire Club",
+            "Generation X",
+            "Quiet Council of Krakoa"
+          ],
+          "abilities": [
+            "Omega-Class Telepathy",
+            "Organic Diamond Transformation",
+            "Mental Illusion & Mind Control",
+            "Near-Invulnerable Diamond Shell",
+            "High Society Strategic Influence",
+            "Genius Corporate Tactician"
+          ],
+          "keyMoments": [
+            "Shifted from Hellfire adversary to co-director of the Xavier Institute alongside Cyclops.",
+            "Unlocked her secondary mutation into impenetrable diamond during Genosha's fall.",
+            "Brokered sovereign geopolitical alliances on the Krakoan Quiet Council."
+          ],
+          "stats": {
+            "intelligence": 88,
+            "strength": 80,
+            "speed": 60,
+            "durability": 92,
+            "power": 90,
+            "combat": 78
+          },
+          "image": "/media/mcu/heroes/EmmaFrost.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Emma_Frost",
+          "sourceTitle": "Emma Frost",
+          "sourceDescription": "Emma Frost in Marvel Universe"
+        },
+        {
+          "id": "Angel",
+          "name": "Angel",
+          "alias": "Archangel / Warren Worthington III",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "Founding X-Men member endowed with magnificent feathered wings, Warren Worthington III was tragically transformed by Apocalypse into Archangel, wielding razor-sharp metallic techno-organic wings and toxic feather flechettes.",
+          "alignment": "Heroic",
+          "status": "Active Mutant Defender",
+          "debut": null,
+          "fullName": "Warren Kenneth Worthington III",
+          "occupation": "Adventurer, chairman & principal stockholder of Worthington Industries, former terrorist",
+          "placeOfBirth": "Centerport, Long Island, New York",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The X-Men #1 (September, 1963)",
+          "affiliations": [
+            "X-Men",
+            "X-Force",
+            "Champions",
+            "Defenders",
+            "Horsemen of Apocalypse"
+          ],
+          "abilities": [
+            "High-Velocity Aerial Flight",
+            "Techno-Organic Razor Wings",
+            "Paralytic Neurotoxin Flechettes",
+            "Aerial Combat Mastery",
+            "Billionaire Financial Backer",
+            "Regenerative Secondary Blood"
+          ],
+          "keyMoments": [
+            "Stood as one of the original five X-Men defending Charles Xavier's dream.",
+            "Remade into the Angel of Death by Apocalypse before breaking free through sheer will.",
+            "Served on Wolverine's strike team X-Force balancing his human and lethal Archangel personas."
+          ],
+          "stats": {
+            "intelligence": 68,
+            "strength": 65,
+            "speed": 84,
+            "durability": 72,
+            "power": 76,
+            "combat": 80
+          },
+          "image": "/media/mcu/heroes/Angel.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Warren_Worthington_III",
+          "sourceTitle": "Warren Worthington III",
+          "sourceDescription": "Angel in Marvel Universe"
+        },
+        {
+          "id": "Havok",
+          "name": "Havok",
+          "alias": "Alex Summers",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "Younger brother of Cyclops, Alex Summers absorbs cosmic energy and discharges it as superheated plasma waves radiating in concentric circles. Though his powers are immensely destructive, Havok has led multiple frontline hero teams.",
+          "alignment": "Heroic",
+          "status": "Active Strike Leader",
+          "debut": null,
+          "fullName": "Alexander Summers",
+          "occupation": "Currently Adventurer, formerly Graduate student in geophysics",
+          "placeOfBirth": "Honolulu, Hawaii",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The X-Men #54 (March, 1969)",
+          "affiliations": [
+            "X-Men",
+            "Avengers Unity Division",
+            "X-Factor",
+            "Starjammers"
+          ],
+          "abilities": [
+            "Cosmic Plasma Discharge",
+            "Energy Absorption & Radiation Immunity",
+            "Concentric Concussive Blasts",
+            "Tactical Squad Leadership",
+            "Acrobatic Hand-to-Hand Combat",
+            "Spatial Targeting"
+          ],
+          "keyMoments": [
+            "Led the government-sponsored X-Factor squad handling public mutant relations.",
+            "Captained the Starjammers across the Shi'ar Empire against Vulcan's tyranny.",
+            "Chosen by Captain America to lead the Avengers Unity Division."
+          ],
+          "stats": {
+            "intelligence": 72,
+            "strength": 65,
+            "speed": 68,
+            "durability": 74,
+            "power": 90,
+            "combat": 80
+          },
+          "image": "/media/mcu/heroes/Havok.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Havok_(comics)",
+          "sourceTitle": "Havok (comics)",
+          "sourceDescription": "Havok in Marvel Universe"
+        },
+        {
+          "id": "Magik",
+          "name": "Magik",
+          "alias": "Illyana Rasputina / Darkchylde",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "Younger sister of Colossus, Illyana Rasputina was kidnapped to the hellish realm of Limbo, where she mastered dark sorcery and forged her Soulsword. She can open stepping discs across space, time, and dimensions.",
+          "alignment": "Heroic",
+          "status": "Captain of Krakoa / Limbo Sorceress",
+          "debut": null,
+          "fullName": "Illyana Nikolievna Rasputina",
+          "occupation": "Adventurer / Defender",
+          "placeOfBirth": "-",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "Giant-Size X-Men #1 (May, 1975)",
+          "affiliations": [
+            "X-Men",
+            "New Mutants",
+            "Midnight Suns",
+            "War Captains of Krakoa"
+          ],
+          "abilities": [
+            "Soulsword Manifestation",
+            "Interdimensional Stepping Discs",
+            "Supreme Sorcery of Limbo",
+            "Mystical Eldritch Armor",
+            "Master Broadsword Swordsmanship",
+            "Telepathic Shielding"
+          ],
+          "keyMoments": [
+            "Forged the Soulsword from her own life essence and deposed the demon Belasco.",
+            "Served as one of the four Great Captains organizing Krakoan military operations.",
+            "Allied with the Midnight Suns to neutralize dark elder-god incursions."
+          ],
+          "stats": {
+            "intelligence": 75,
+            "strength": 68,
+            "speed": 74,
+            "durability": 75,
+            "power": 92,
+            "combat": 88
+          },
+          "image": "/media/mcu/heroes/Magik.svg",
+          "imageSource": "placeholder",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Magik_(character)",
+          "sourceTitle": "Magik (character)",
+          "sourceDescription": "Magik in Marvel Universe"
+        },
+        {
+          "id": "Hercules",
+          "name": "Hercules",
+          "alias": "The Prince of Power",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "Son of Zeus and Greek demigod of strength, Hercules has fought across millennia. Wielding an adamantine mace and peerless brawling power, he brings Olympian bravado and genuine heroism to the Avengers.",
+          "alignment": "Heroic",
+          "status": "Olympian Avenger",
+          "debut": null,
+          "fullName": "Heracles / Harry Cleese",
+          "occupation": "Adventurer, Olympian God of Strength and Labor, later Olympian God of Heroes",
+          "placeOfBirth": "Thebes, Greece",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "Journey into Mystery Annual #1 (October, 1965)",
+          "affiliations": [
+            "Avengers",
+            "Gods of Olympus",
+            "Champions",
+            "Defenders"
+          ],
+          "abilities": [
+            "Olympian Demigod Strength",
+            "Immortality & Divine Durability",
+            "Golden Adamantine Mace",
+            "Ancient Grappling & Pankration",
+            "Regenerative Godly Vigor",
+            "Master Archer & Charioteer"
+          ],
+          "keyMoments": [
+            "Stood toe-to-toe with Thor and the Hulk in legendary clashes of brute strength.",
+            "Fought alongside the Avengers against Kang, the Masters of Evil, and Thanos.",
+            "Led the Godpack against the Chaos King to preserve all creation."
+          ],
+          "stats": {
+            "intelligence": 65,
+            "strength": 100,
+            "speed": 65,
+            "durability": 95,
+            "power": 88,
+            "combat": 95
+          },
+          "image": "/media/mcu/heroes/Hercules.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Hercules_(Marvel_Comics)",
+          "sourceTitle": "Hercules (Marvel Comics)",
+          "sourceDescription": "Hercules in Marvel Universe"
+        },
+        {
+          "id": "WonderMan",
+          "name": "Wonder Man",
+          "alias": "Simon Williams",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "Infused with experimental ionic energy, Simon Williams possesses superhuman physical prowess and complete energy immortality. Despite a pacifist philosophy and career in Hollywood acting, he remains one of Earth's foundational defenders.",
+          "alignment": "Heroic",
+          "status": "Ionic Avenger",
+          "debut": null,
+          "fullName": "Simon Williams",
+          "occupation": "Former industrialist, now stuntman, actor, adventurer",
+          "placeOfBirth": "Paterson, New Jersey",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The Avengers #9 (October, 1964)",
+          "affiliations": [
+            "Avengers",
+            "West Coast Avengers",
+            "Defenders",
+            "Force Works"
+          ],
+          "abilities": [
+            "Pure Ionic Energy Form",
+            "Immortal Invulnerability",
+            "Class-100 Physical Strength",
+            "Ionic Energy Blasts & Flight",
+            "Teleportation & Size Alteration",
+            "Hollywood Theatricality"
+          ],
+          "keyMoments": [
+            "Sacrificed his life to save the original Avengers from Baron Zemo's betrayal.",
+            "Resurrected as an immortal being of pure ionic power and co-founded West Coast Avengers.",
+            "Provided the brain-wave patterns used by Hank Pym and Ultron to create Vision."
+          ],
+          "stats": {
+            "intelligence": 70,
+            "strength": 95,
+            "speed": 78,
+            "durability": 92,
+            "power": 90,
+            "combat": 78
+          },
+          "image": "/media/mcu/heroes/WonderMan.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Wonder_Man",
+          "sourceTitle": "Wonder Man",
+          "sourceDescription": "Wonder Man in Marvel Universe"
+        },
+        {
+          "id": "CaptainBritain",
+          "name": "Captain Britain",
+          "alias": "Brian Braddock",
+          "universe": "mcu",
+          "faction": "heroes",
+          "summary": "Chosen by Merlin and given the Amulet of Right, Brian Braddock became Captain Britain, defender of the British Isles and the Captain Britain Corps across the multiverse. His power is directly fueled by confidence and willpower.",
+          "alignment": "Heroic",
+          "status": "Champion of the Omniverse",
+          "debut": null,
+          "fullName": "Brian Braddock",
+          "occupation": "Adventurer, formerly King of Otherworld, scientist",
+          "placeOfBirth": "Braddock Manor, England",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "Captain Britain Weekly #1 (October, 1976)",
+          "affiliations": [
+            "Excalibur",
+            "Captain Britain Corps",
+            "MI-13",
+            "Secret Avengers"
+          ],
+          "abilities": [
+            "Amulet of Right Mystical Power",
+            "Superhuman Strength & Supersonic Flight",
+            "Interdimensional Shielding",
+            "Confidence-Scalable Power",
+            "Master British Swordsmanship",
+            "Genius Physics Mind"
+          ],
+          "keyMoments": [
+            "Defended otherworld and anchored the Captain Britain Corps across infinite Earths.",
+            "Formed and led the mutant hero team Excalibur in the UK.",
+            "Stood alongside the Secret Avengers against cosmic incursions."
+          ],
+          "stats": {
+            "intelligence": 78,
+            "strength": 88,
+            "speed": 75,
+            "durability": 88,
+            "power": 85,
+            "combat": 82
+          },
+          "image": "/media/mcu/heroes/CaptainBritain.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Captain_Britain",
+          "sourceTitle": "Captain Britain",
+          "sourceDescription": "Captain Britain in Marvel Universe"
         }
       ],
       "villains": [
@@ -4701,6 +5469,479 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Apocalypse_(character)",
           "sourceTitle": "Apocalypse (character)",
           "sourceDescription": "Fictional character from the X-Men franchise"
+        },
+        {
+          "id": "RedHulk",
+          "name": "Red Hulk",
+          "alias": "Rulk / General Thaddeus 'Thunderbolt' Ross",
+          "universe": "mcu",
+          "faction": "villains",
+          "summary": "Obsessed with capturing Bruce Banner, US General 'Thunderbolt' Ross underwent classified gamma and cosmic radiation enhancements through the Intelligencia. Unlike Hulk, Red Hulk retains military battle cunning and generates superheated thermal radiation that melts concrete with every punch.",
+          "alignment": "Villainous",
+          "status": "Active Super Soldier Titan",
+          "debut": null,
+          "fullName": "Thaddeus E. Ross",
+          "occupation": "Lieutenant general in US Air Force",
+          "placeOfBirth": "-",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "Incredible Hulk #1 (May 1962, as Ross); Hulk #1 (January 2008, as Red Hulk)",
+          "affiliations": [
+            "Code Red",
+            "Intelligencia",
+            "Offenders",
+            "Thunderbolts",
+            "US Military"
+          ],
+          "abilities": [
+            "Gamma & Cosmic Thermal Radiation Emission",
+            "Rage-Generated Plasma Heat Aura",
+            "Colossal Physical Strength",
+            "Energy Absorption",
+            "Strategic Military Command",
+            "Bulletproof & Missileproof Hull"
+          ],
+          "keyMoments": [
+            "Hunted Bruce Banner across decades as a three-star US Air Force general.",
+            "Transformed by MODOK and the Leader into the lethal, tactical Red Hulk.",
+            "Defeated the Hulk, Thor, and the Abomination in single combat across Earth and space."
+          ],
+          "stats": {
+            "intelligence": 78,
+            "strength": 100,
+            "speed": 68,
+            "durability": 95,
+            "power": 92,
+            "combat": 88
+          },
+          "image": "/media/mcu/villains/RedHulk.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Thunderbolt_Ross",
+          "sourceTitle": "Thunderbolt Ross",
+          "sourceDescription": "Red Hulk in Marvel Universe"
+        },
+        {
+          "id": "Abomination",
+          "name": "Abomination",
+          "alias": "Emil Blonsky",
+          "universe": "mcu",
+          "faction": "villains",
+          "summary": "Ex-KGB operative Emil Blonsky intentionally bathed himself in a higher dose of gamma radiation than Bruce Banner received, morphing into the reptilian Abomination. Stronger than the base Hulk at resting rage, he is a savage recurring menace.",
+          "alignment": "Villainous",
+          "status": "Active Heavy Enforcer",
+          "debut": null,
+          "fullName": "Emil Blonsky",
+          "occupation": "Ex-Spy",
+          "placeOfBirth": "Zagreb, Yugoslavia",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "Tales to Astonish #90 (April, 1967)",
+          "affiliations": [
+            "Masters of Evil",
+            "Intelligencia",
+            "KGB (formerly)",
+            "Forgotten"
+          ],
+          "abilities": [
+            "Monstrous Physical Strength",
+            "Scaly Armored Exoskeleton",
+            "Extreme Kinetic Durability",
+            "Hyper-Leaping & Seismic Slams",
+            "KGB Military Hand-to-Hand Combat",
+            "Regenerative Gamma Vitality"
+          ],
+          "keyMoments": [
+            "Overwhelmed the Hulk during their first brutal clash in New Mexico.",
+            "Murdered Betty Ross via radiation poisoning, igniting Banner's eternal wrath.",
+            "Fought across Harlem against the Hulk in an apocalyptic destructive siege."
+          ],
+          "stats": {
+            "intelligence": 62,
+            "strength": 95,
+            "speed": 60,
+            "durability": 92,
+            "power": 85,
+            "combat": 85
+          },
+          "image": "/media/mcu/villains/Abomination.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Abomination_(character)",
+          "sourceTitle": "Abomination (character)",
+          "sourceDescription": "Abomination in Marvel Universe"
+        },
+        {
+          "id": "Carnage",
+          "name": "Carnage",
+          "alias": "Cletus Kasady",
+          "universe": "mcu",
+          "faction": "villains",
+          "summary": "When Venom's offspring bonded with sadistic serial killer Cletus Kasady at a molecular bloodstream level, Carnage was born. Far deadlier and more chaotic than Venom, he morphs symbiote tendrils into scythes, axes, and lethal projectiles.",
+          "alignment": "Villainous",
+          "status": "Active Symbiote Killer",
+          "debut": null,
+          "fullName": "Cletus Cortland Kasady",
+          "occupation": "-",
+          "placeOfBirth": "-",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The Amazing Spider-Man #361 (April, 1992)",
+          "affiliations": [
+            "Maximum Carnage Gang",
+            "Cult of Knull",
+            "Symbiote Hive"
+          ],
+          "abilities": [
+            "Blood-Bonded Symbiote Weaponry",
+            "Symbiote Blades, Scythes & Projectiles",
+            "Superhuman Strength Exceeding Venom & Spider-Man",
+            "Wall-Crawling & Camouflage",
+            "Undetectable to Spider-Sense",
+            "Rapid Cellular Regeneration"
+          ],
+          "keyMoments": [
+            "Escaped Ravencroft and terrorized Manhattan in the iconic Maximum Carnage massacre.",
+            "Forced Spider-Man and Venom into a desperate truce to stop his reign of slaughter.",
+            "Acted as the harbinger of Knull the Symbiote God across Earth."
+          ],
+          "stats": {
+            "intelligence": 65,
+            "strength": 88,
+            "speed": 84,
+            "durability": 88,
+            "power": 90,
+            "combat": 84
+          },
+          "image": "/media/mcu/villains/Carnage.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Carnage_(character)",
+          "sourceTitle": "Carnage (character)",
+          "sourceDescription": "Carnage in Marvel Universe"
+        },
+        {
+          "id": "DoctorOctopus",
+          "name": "Doctor Octopus",
+          "alias": "Doc Ock / Otto Octavius",
+          "universe": "mcu",
+          "faction": "villains",
+          "summary": "A nuclear physicist whose body was permanently fused with four artificially intelligent mechanical tentacles, Doctor Octopus is Spider-Man's most enduring cerebral nemesis and founder of the Sinister Six.",
+          "alignment": "Villainous",
+          "status": "Sinister Six Mastermind",
+          "debut": null,
+          "fullName": "Dr. Otto Gunther Octavius",
+          "occupation": "Former atomic-research consultant, criminal mastermind",
+          "placeOfBirth": "Schenectady, New York",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The Amazing Spider-Man #3 (July, 1963)",
+          "affiliations": [
+            "Sinister Six",
+            "Masters of Evil",
+            "Legion of Accursed"
+          ],
+          "abilities": [
+            "Four Telescopic Titanium-Steel Tentacles",
+            "Genius-Level Nuclear & Cybernetic Intellect",
+            "Master Strategist & Planner",
+            "High-Speed Climbing & Striking",
+            "Tactical Pre-Planning",
+            "Direct Neural Harness Interface"
+          ],
+          "keyMoments": [
+            "Founded the original Sinister Six uniting Spider-Man's most dangerous adversaries.",
+            "Nearly incinerated the Earth using his Octavian lens satellites in Ends of the Earth.",
+            "Swapped consciousness with Peter Parker, briefly becoming the Superior Spider-Man."
+          ],
+          "stats": {
+            "intelligence": 94,
+            "strength": 65,
+            "speed": 55,
+            "durability": 75,
+            "power": 75,
+            "combat": 78
+          },
+          "image": "/media/mcu/villains/DoctorOctopus.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Doctor_Octopus",
+          "sourceTitle": "Doctor Octopus",
+          "sourceDescription": "Doctor Octopus in Marvel Universe"
+        },
+        {
+          "id": "Juggernaut",
+          "name": "Juggernaut",
+          "alias": "The Unstoppable / Cain Marko",
+          "universe": "mcu",
+          "faction": "villains",
+          "summary": "Stepbrother to Charles Xavier, Cain Marko was imbued with the mystical power of the Crimson Gem of Cyttorak. Once he gains forward momentum, no physical force on Earth or in the cosmos can halt his forward charge.",
+          "alignment": "Villainous",
+          "status": "Unstoppable Mystic Force",
+          "debut": null,
+          "fullName": "Cain Marko",
+          "occupation": "Adventurer formerly Professional criminal, mercenary, soldier",
+          "placeOfBirth": "Berkeley, California",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The X-Men #12 (July, 1965)",
+          "affiliations": [
+            "Brotherhood of Mutants",
+            "Excalibur",
+            "Thunderbolts",
+            "Cyttorak Avatars"
+          ],
+          "abilities": [
+            "Unstoppable Forward Kinetic Momentum",
+            "Cyttorak Mystic Invulnerability Force Field",
+            "God-Tier Physical Strength",
+            "Immunity to Physical Fatigue & Hunger",
+            "Telepathic-Blocking Domed Helmet",
+            "Cataclysmic Shockwaves"
+          ],
+          "keyMoments": [
+            "Smashed through the X-Mansion defense systems in his inaugural unstoppable rampage.",
+            "Tore through whole superhero teams single-handedly across decades of clashes.",
+            "Chosen as the Kuurth Breaker of Stone during the Fear Itself crisis."
+          ],
+          "stats": {
+            "intelligence": 55,
+            "strength": 100,
+            "speed": 60,
+            "durability": 100,
+            "power": 90,
+            "combat": 82
+          },
+          "image": "/media/mcu/villains/Juggernaut.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Juggernaut_(character)",
+          "sourceTitle": "Juggernaut (character)",
+          "sourceDescription": "Juggernaut in Marvel Universe"
+        },
+        {
+          "id": "Sandman",
+          "name": "Sandman",
+          "alias": "William Baker / Flint Marko",
+          "universe": "mcu",
+          "faction": "villains",
+          "summary": "Caught in a radioactive beach sand explosion while fleeing police, Flint Marko's body converted into living granular sand. He can reshape his limbs into crushing sandhammers, dissipate through physical attacks, and summon sandstorms.",
+          "alignment": "Villainous",
+          "status": "Variable / Rogue Element",
+          "debut": null,
+          "fullName": "William Baker",
+          "occupation": "Professional Criminal",
+          "placeOfBirth": "Queens, New York",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The Amazing Spider-Man #4 (September, 1963)",
+          "affiliations": [
+            "Sinister Six",
+            "Frightful Four",
+            "Outlaws",
+            "Avengers (briefly)"
+          ],
+          "abilities": [
+            "Granular Shape-Shifting & Density Control",
+            "Form Hardened Stone & Sand Mallets",
+            "Sandstorm Generation & Flight",
+            "Immunity to Physical Concussion",
+            "Absorption of Environmental Sand",
+            "High Adaptability"
+          ],
+          "keyMoments": [
+            "Clashed with Spider-Man as one of his original founding rogue gallery members.",
+            "Joined the inaugural Sinister Six lineup under Doctor Octopus's leadership.",
+            "Struggled with redemption, serving temporarily as an active reserve Avenger."
+          ],
+          "stats": {
+            "intelligence": 60,
+            "strength": 80,
+            "speed": 62,
+            "durability": 90,
+            "power": 85,
+            "combat": 75
+          },
+          "image": "/media/mcu/villains/Sandman.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sandman_(Marvel_Comics)",
+          "sourceTitle": "Sandman (Marvel Comics)",
+          "sourceDescription": "Sandman in Marvel Universe"
+        },
+        {
+          "id": "Electro",
+          "name": "Electro",
+          "alias": "Max Dillon",
+          "universe": "mcu",
+          "faction": "villains",
+          "summary": "Struck by lightning while repairing power lines, Max Dillon gained the power to generate, store, and discharge millions of volts of high-frequency electricity. He can ride electrical currents and short out entire city grids.",
+          "alignment": "Villainous",
+          "status": "Active Electric Threat",
+          "debut": null,
+          "fullName": "Maxwell Dillon",
+          "occupation": "Professional criminal",
+          "placeOfBirth": "-",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The Amazing Spider-Man #9 (February, 1964)",
+          "affiliations": [
+            "Sinister Six",
+            "Frightful Four",
+            "Emissaries of Evil"
+          ],
+          "abilities": [
+            "Electrostatic Energy Discharge",
+            "Electrical Current Riding & Flight",
+            "Disruption of Power Grids & Tech",
+            "Electromagnetic Levitation",
+            "Lightning Bolts & Plasma Blasts",
+            "Energy Body State"
+          ],
+          "keyMoments": [
+            "Blacked out New York City during his opening campaign against Spider-Man.",
+            "Served on multiple iterations of Doctor Octopus's Sinister Six strike teams.",
+            "Transformed into an antimatter-charged live wire during multiversal crossovers."
+          ],
+          "stats": {
+            "intelligence": 65,
+            "strength": 65,
+            "speed": 75,
+            "durability": 70,
+            "power": 92,
+            "combat": 70
+          },
+          "image": "/media/mcu/villains/Electro.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Electro_(Marvel_Comics)",
+          "sourceTitle": "Electro (Marvel Comics)",
+          "sourceDescription": "Electro in Marvel Universe"
+        },
+        {
+          "id": "Kraven",
+          "name": "Kraven the Hunter",
+          "alias": "Sergei Kravinoff",
+          "universe": "mcu",
+          "faction": "villains",
+          "summary": "A Russian aristocrat and big-game hunter enhanced by mystical jungle elixirs, Kraven views Spider-Man as the ultimate quarry. Disdaining modern firearms, he hunts with spears, traps, and bare-knuckle savagery.",
+          "alignment": "Villainous",
+          "status": "Elite Apex Predator",
+          "debut": null,
+          "fullName": "Sergei Nikolaevich Kravinoff",
+          "occupation": "Professional game hunter, mercenary",
+          "placeOfBirth": "Volgograd (formerly Stalingrad), Russia",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The Amazing Spider-Man #15 (August, 1964)",
+          "affiliations": [
+            "Sinister Six",
+            "Kravinoff Family"
+          ],
+          "abilities": [
+            "Mystical Elixir Enhanced Physicals",
+            "Apex Tracking & Scent Hunting",
+            "Master Trapper & Poison Brewer",
+            "Lethal Hand-to-Hand Combatant",
+            "Master of Nerve Strikes & Blades",
+            "Indomitable Predator Will"
+          ],
+          "keyMoments": [
+            "Trapped and buried Spider-Man alive in the legendary masterpiece Kraven's Last Hunt.",
+            "Donned Spider-Man's suit and prowled the city to prove his absolute superiority.",
+            "Resurrected through dark sacrificial rituals by the Kravinoff family clan."
+          ],
+          "stats": {
+            "intelligence": 75,
+            "strength": 75,
+            "speed": 70,
+            "durability": 78,
+            "power": 65,
+            "combat": 92
+          },
+          "image": "/media/mcu/villains/Kraven.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Kraven_the_Hunter",
+          "sourceTitle": "Kraven the Hunter",
+          "sourceDescription": "Kraven the Hunter in Marvel Universe"
+        },
+        {
+          "id": "Bullseye",
+          "name": "Bullseye",
+          "alias": "Lester",
+          "universe": "mcu",
+          "faction": "villains",
+          "summary": "A psychopathic assassin with innate superhuman marksmanship, Bullseye can turn any object—from a playing card or paperclip to a sniper bullet—into a lethal projectile. Reinforced with an adamantium spine, he is Daredevil's darkest personal foil.",
+          "alignment": "Villainous",
+          "status": "Active Lethal Mercenary",
+          "debut": null,
+          "fullName": "Lester",
+          "occupation": "Assassin, professional criminal, former mercenary",
+          "placeOfBirth": "-",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "Daredevil #131 (March, 1976)",
+          "affiliations": [
+            "Thunderbolts",
+            "Dark Avengers",
+            "Hand (formerly)"
+          ],
+          "abilities": [
+            "Infallible Projectile Accuracy",
+            "Adamantium-Reinforced Skeleton",
+            "Deadly Lethal Improvisation",
+            "Master Martial Artist",
+            "Acrobatic Reflexes",
+            "Sadistic Psychological Torment"
+          ],
+          "keyMoments": [
+            "Murdered Elektra with her own sai, cementing a legendary blood rivalry with Daredevil.",
+            "Impersonated Hawkeye on Norman Osborn's Dark Avengers squad.",
+            "Smashed through Daredevil's life in Hell's Kitchen across decades of assassinations."
+          ],
+          "stats": {
+            "intelligence": 72,
+            "strength": 60,
+            "speed": 70,
+            "durability": 75,
+            "power": 55,
+            "combat": 95
+          },
+          "image": "/media/mcu/villains/Bullseye.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Bullseye_(character)",
+          "sourceTitle": "Bullseye (character)",
+          "sourceDescription": "Bullseye in Marvel Universe"
+        },
+        {
+          "id": "Mephisto",
+          "name": "Mephisto",
+          "alias": "Lord of the Underworld",
+          "universe": "mcu",
+          "faction": "villains",
+          "summary": "The archetypal demon lord of Marvel lore, Mephisto rules a netherworld pocket dimension, trading deceitful pacts and consuming souls. He is behind some of Marvel history's most tragic bargains, including Ghost Rider's curse.",
+          "alignment": "Villainous",
+          "status": "Hell-Realm Sovereign",
+          "debut": null,
+          "fullName": "Mephisto",
+          "occupation": "Lord of a realm of Hell",
+          "placeOfBirth": "Hell",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The Silver Surfer #3 (December, 1968)",
+          "affiliations": [
+            "Lords of the Splinter Realms",
+            "Council of Red"
+          ],
+          "abilities": [
+            "Reality & Soul Manipulation",
+            "Cosmic Black Magic",
+            "Shape-Shifting & Immortality",
+            "Dimensional Warping",
+            "Summoning Demon Armies",
+            "Contractual Deception"
+          ],
+          "keyMoments": [
+            "Bound Johnny Blaze with Zarathos, creating the first Ghost Rider.",
+            "Erased Peter Parker and Mary Jane's marriage in One More Day.",
+            "Orchestrated multiversal villain councils across infinite realities."
+          ],
+          "stats": {
+            "intelligence": 92,
+            "strength": 85,
+            "speed": 75,
+            "durability": 95,
+            "power": 100,
+            "combat": 80
+          },
+          "image": "/media/mcu/villains/Mephisto.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Mephisto_(Marvel_Comics)",
+          "sourceTitle": "Mephisto (Marvel Comics)",
+          "sourceDescription": "Mephisto in Marvel Universe"
         }
       ],
       "antiheroes": [
@@ -5700,6 +6941,146 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Mystique_(character)",
           "sourceTitle": "Mystique (character)",
           "sourceDescription": "Marvel Comics fictional character"
+        },
+        {
+          "id": "BlackCat",
+          "name": "Black Cat",
+          "alias": "Felicia Hardy",
+          "universe": "mcu",
+          "faction": "antiheroes",
+          "summary": "Daughter of a world-renowned cat burglar, Felicia Hardy took up the mantle of Black Cat. Combining Olympic acrobatics, martial arts, and subconscious probability manipulation ('bad luck' fields), she maintains an electric cat-and-mouse romance with Spider-Man.",
+          "alignment": "Chaotic / Neutral",
+          "status": "Active Master Thief",
+          "debut": null,
+          "fullName": "Felicia Sara Hardy",
+          "occupation": "Cat burglar; Private investigator, founder of Cat's Eye Investigations.",
+          "placeOfBirth": "Queens, New York",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The Amazing Spider-Man #194 (July, 1979)",
+          "affiliations": [
+            "Heroes for Hire",
+            "Defenders",
+            "Cat's Claw"
+          ],
+          "abilities": [
+            "Tiniest Probability 'Bad Luck' Hexes",
+            "Olympic Gymnastics & Cat Burglary",
+            "Retractable Micro-Claws & Grapples",
+            "Night-Vision Contact Lenses",
+            "Master Martial Artist",
+            "Master Infiltrator"
+          ],
+          "keyMoments": [
+            "Broke Spider-Man out of custody and stole into the hearts of Marvel fans.",
+            "Ran New York's underworld as queenpin before returning to freelance heroism.",
+            "Stole ancient relics from Doctor Strange and the Thieves Guild."
+          ],
+          "stats": {
+            "intelligence": 72,
+            "strength": 55,
+            "speed": 75,
+            "durability": 65,
+            "power": 65,
+            "combat": 82
+          },
+          "image": "/media/mcu/antiheroes/BlackCat.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Black_Cat_(character)",
+          "sourceTitle": "Black Cat (character)",
+          "sourceDescription": "Black Cat in Marvel Universe"
+        },
+        {
+          "id": "SilverSable",
+          "name": "Silver Sable",
+          "alias": "Silver Sablinova",
+          "universe": "mcu",
+          "faction": "antiheroes",
+          "summary": "Leader of the elite Symkarian Wild Pack mercenary force, Silver Sable is an uncompromising tactician, markswoman, and hand-to-hand combatant dedicated to hunting war criminals and funding her homeland.",
+          "alignment": "Chaotic / Neutral",
+          "status": "CEO of Silver Sable International",
+          "debut": null,
+          "fullName": "Silveria Sablinova",
+          "occupation": "Criminal Strategist",
+          "placeOfBirth": "-",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The Amazing Spider-Man #265 (June, 1985)",
+          "affiliations": [
+            "Wild Pack",
+            "Heroes for Hire",
+            "The Outlaws"
+          ],
+          "abilities": [
+            "Master Martial Artist & Marksman",
+            "Wild Pack Military Command",
+            "Kevlar-Reinforced Tactical Armor",
+            "Master Knife Fighter & Thrower",
+            "International Espionage",
+            "Corporate Logistics"
+          ],
+          "keyMoments": [
+            "Hunted international war criminals across Europe alongside Spider-Man.",
+            "Held off Doctor Octopus's army during Ends of the Earth.",
+            "Protected Symkarian sovereignty from Latverian expansion."
+          ],
+          "stats": {
+            "intelligence": 78,
+            "strength": 58,
+            "speed": 65,
+            "durability": 68,
+            "power": 45,
+            "combat": 88
+          },
+          "image": "/media/mcu/antiheroes/SilverSable.svg",
+          "imageSource": "placeholder",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Silver_Sable",
+          "sourceTitle": "Silver Sable",
+          "sourceDescription": "Silver Sable in Marvel Universe"
+        },
+        {
+          "id": "AntiVenom",
+          "name": "Anti-Venom",
+          "alias": "Eddie Brock",
+          "universe": "mcu",
+          "faction": "antiheroes",
+          "summary": "When Eddie Brock's dormant symbiote remnants merged with his white blood cells under Mister Negative's healing touch, Anti-Venom emerged. Possessing caustic antibodies that neutralize toxins, diseases, and other symbiotes, he functions as a lethal vigilante purifier.",
+          "alignment": "Chaotic / Neutral",
+          "status": "Purifying Symbiote",
+          "debut": null,
+          "fullName": "Edward Charles Allan Brock",
+          "occupation": "Vigilante; former journalist for the Daily Globe",
+          "placeOfBirth": "San Francisco, California",
+          "publisher": "Marvel Comics",
+          "firstAppearance": "The Amazing Spider-Man #569 (August, 2008)",
+          "affiliations": [
+            "Revengers",
+            "Savage Six"
+          ],
+          "abilities": [
+            "Caustic Symbiote Cleansing Antibodies",
+            "Cure Toxins, Poisons & Symbiotes",
+            "Immunity to Fire & Sound",
+            "Camouflage & Web-Shooting",
+            "Wall-Crawling & Tendrils",
+            "Healing Factor"
+          ],
+          "keyMoments": [
+            "Purged the Venom symbiote from Mac Gargan with searing touch.",
+            "Cured thousands of New Yorkers infected by the Spider-Island virus.",
+            "Fought alongside Agent Venom against Carnage's forces."
+          ],
+          "stats": {
+            "intelligence": 68,
+            "strength": 88,
+            "speed": 78,
+            "durability": 88,
+            "power": 86,
+            "combat": 84
+          },
+          "image": "/media/mcu/antiheroes/AntiVenom.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Anti-Venom",
+          "sourceTitle": "Anti-Venom",
+          "sourceDescription": "Anti-Venom in Marvel Universe"
         }
       ]
     },
@@ -7037,6 +8418,477 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Vixen_(character)",
           "sourceTitle": "Vixen (character)",
           "sourceDescription": "DC Comics superheroine"
+        },
+        {
+          "id": "GreenLanternJohnStewart",
+          "name": "Green Lantern (John Stewart)",
+          "alias": "John Stewart",
+          "universe": "dc",
+          "faction": "heroes",
+          "summary": "A US Marine veteran and master architect, John Stewart brings unmatched discipline and structural integrity to his Green Lantern Power Ring. His constructs are not hollow light—they are solid, functional, mechanical masterpieces built from the inside out.",
+          "alignment": "Heroic",
+          "status": "Honor Guard Architect",
+          "debut": null,
+          "fullName": "John Stewart",
+          "occupation": "Adventurer / Defender",
+          "placeOfBirth": "-",
+          "publisher": "DC Comics",
+          "firstAppearance": "Green Lantern #87 (December, 1971)",
+          "affiliations": [
+            "Green Lantern Corps",
+            "Justice League",
+            "Darkstars"
+          ],
+          "abilities": [
+            "Oan Power Ring Willpower Constructs",
+            "Architectural Solid-Light Engineering",
+            "US Marine Tactical Combat & Marksmanship",
+            "FTL Space Flight & Planetary Survival",
+            "Energy Absorption & Force Fields",
+            "Indomitable Willpower"
+          ],
+          "keyMoments": [
+            "Selected by the Guardians of the Universe as Earth's alternate Green Lantern.",
+            "Anchored the Justice League on the frontlines against Darkseid and Brainiac.",
+            "Ascended to the Green Lantern Honor Guard overseeing interstellar sectors."
+          ],
+          "stats": {
+            "intelligence": 82,
+            "strength": 88,
+            "speed": 85,
+            "durability": 88,
+            "power": 95,
+            "combat": 90
+          },
+          "image": "/media/dc/heroes/GreenLanternJohnStewart.svg",
+          "imageSource": "placeholder",
+          "sourceUrl": "https://en.wikipedia.org/wiki/John_Stewart_(character)",
+          "sourceTitle": "John Stewart (character)",
+          "sourceDescription": "Green Lantern (John Stewart) in DC Universe"
+        },
+        {
+          "id": "SwampThing",
+          "name": "Swamp Thing",
+          "alias": "Avatar of the Green / Alec Holland",
+          "universe": "dc",
+          "faction": "heroes",
+          "summary": "When botanist Alec Holland was murdered in Louisiana swamps by corporate saboteurs, his consciousness bonded with the elemental plant network known as the Green. As Swamp Thing, he commands all plant life on Earth.",
+          "alignment": "Heroic",
+          "status": "Elemental Earth Sovereign",
+          "debut": null,
+          "fullName": "Alec Holland",
+          "occupation": "Planet Elemental, former Biochemist",
+          "placeOfBirth": "-",
+          "publisher": "DC Comics",
+          "firstAppearance": "House of Secrets #92 (July, 1971)",
+          "affiliations": [
+            "Parliament of Trees",
+            "Justice League Dark",
+            "Shadowpact"
+          ],
+          "abilities": [
+            "Avatar of the Green Plant Manipulation",
+            "Regenerate Body from Any Flora",
+            "Biomass Size Alteration & Spores",
+            "Superhuman Elemental Strength",
+            "Travel via the Earth's Root Web",
+            "Astral Projection"
+          ],
+          "keyMoments": [
+            "Discovered through Alan Moore's revelation that he was not a man turned monster, but a plant god that believed it was Alec Holland.",
+            "Defended the Green against the Rot and Anton Arcane in the Rotworld crisis.",
+            "Joined Justice League Dark to protect Earth's mystical biosphere."
+          ],
+          "stats": {
+            "intelligence": 84,
+            "strength": 95,
+            "speed": 60,
+            "durability": 100,
+            "power": 98,
+            "combat": 80
+          },
+          "image": "/media/dc/heroes/SwampThing.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Swamp_Thing",
+          "sourceTitle": "Swamp Thing",
+          "sourceDescription": "Swamp Thing in DC Universe"
+        },
+        {
+          "id": "Deadman",
+          "name": "Deadman",
+          "alias": "Boston Brand",
+          "universe": "dc",
+          "faction": "heroes",
+          "summary": "A trapeze artist murdered during a circus stunt, Boston Brand was granted the ability to walk the Earth as an invisible spirit by the Hindu goddess Rama Kushna. He can possess any living body to fight injustice and guide lost souls.",
+          "alignment": "Heroic",
+          "status": "Spirit Infiltrator",
+          "debut": null,
+          "fullName": "Boston Brand",
+          "occupation": "Wandering Spirit, Former Circus Aerialist",
+          "placeOfBirth": "-",
+          "publisher": "DC Comics",
+          "firstAppearance": "Strange Adventures #205 (October, 1967)",
+          "affiliations": [
+            "Justice League Dark",
+            "Sentinels of Magic",
+            "Black Lantern Corps (formerly)"
+          ],
+          "abilities": [
+            "Full Body Possession of Living Beings",
+            "Invisibility & Intangibility",
+            "Flight & Astral Perception",
+            "Circus Acrobatics Mastery",
+            "Immunity to Physical Harm",
+            "Mystic Sense"
+          ],
+          "keyMoments": [
+            "Sought his own assassin while freeing innocent victims across the globe.",
+            "Served on Justice League Dark as their primary ethereal scout.",
+            "Given the White Lantern Ring during the Brightest Day resurrection."
+          ],
+          "stats": {
+            "intelligence": 70,
+            "strength": 50,
+            "speed": 70,
+            "durability": 100,
+            "power": 85,
+            "combat": 70
+          },
+          "image": "/media/dc/heroes/Deadman.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Deadman_(DC_Comics)",
+          "sourceTitle": "Deadman (DC Comics)",
+          "sourceDescription": "Deadman in DC Universe"
+        },
+        {
+          "id": "TheSpectre",
+          "name": "The Spectre",
+          "alias": "Wrath of God / Jim Corrigan",
+          "universe": "dc",
+          "faction": "heroes",
+          "summary": "The cosmic embodiment of divine vengeance, the Spectre must be anchored to a human soul to temper his limitless retribution. Bound first to murdered detective Jim Corrigan, he punishes the guilty with terrifying reality-altering power.",
+          "alignment": "Heroic",
+          "status": "Cosmic Judge of Vengeance",
+          "debut": null,
+          "fullName": "Aztar / Jim Corrigan",
+          "occupation": "-",
+          "placeOfBirth": "-",
+          "publisher": "DC Comics",
+          "firstAppearance": "More Fun Comics #52 (February, 1940)",
+          "affiliations": [
+            "Justice Society of America",
+            "Sentinels of Magic"
+          ],
+          "abilities": [
+            "Limitless Reality & Matter Warping",
+            "Near-Omnipotent Divine Power",
+            "Omnipresence & Intangibility",
+            "Time & Space Manipulation",
+            "Soul Judgment & Punishment",
+            "Absolute Immortality"
+          ],
+          "keyMoments": [
+            "Fought in World War II with the original Justice Society of America.",
+            "Manipulated by Eclipso to eliminate magic across the Day of Vengeance crisis.",
+            "Reanchored his divine mandate to protect human redemption."
+          ],
+          "stats": {
+            "intelligence": 95,
+            "strength": 100,
+            "speed": 95,
+            "durability": 100,
+            "power": 100,
+            "combat": 85
+          },
+          "image": "/media/dc/heroes/TheSpectre.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Spectre_(DC_Comics_character)",
+          "sourceTitle": "Spectre (DC Comics character)",
+          "sourceDescription": "The Spectre in DC Universe"
+        },
+        {
+          "id": "StaticShock",
+          "name": "Static",
+          "alias": "Static Shock / Virgil Hawkins",
+          "universe": "dc",
+          "faction": "heroes",
+          "summary": "Exposed to mutagenic gas during the Big Bang gang shootout in Dakota City, teenager Virgil Hawkins gained electromagnetic manipulation powers. Flying on a metal manhole cover or Static Saucer, he uses wit and science to defend Dakota and the Teen Titans.",
+          "alignment": "Heroic",
+          "status": "Dakota City Defender",
+          "debut": null,
+          "fullName": "Virgil Ovid Hawkins",
+          "occupation": "Student",
+          "placeOfBirth": "Paris Island, Dakota City",
+          "publisher": "DC Comics",
+          "firstAppearance": "Static #1 (June, 1993)",
+          "affiliations": [
+            "Teen Titans",
+            "Shadow Cabinet",
+            "Heroes",
+            "Young Justice"
+          ],
+          "abilities": [
+            "Electromagnetic Energy Generation",
+            "Levitation & Flight via Metallic Saucers",
+            "Magnetize & Manipulate Metals",
+            "Taser Energy Projectiles & Forcefields",
+            "Genius Scientific Acumen",
+            "Electrical Drain & Redirection"
+          ],
+          "keyMoments": [
+            "Survives the Dakota Big Bang and becomes the hero of Paris Island.",
+            "Joined the Teen Titans and defended Earth against the Terror Titans.",
+            "Defeated Holocaust and saved the Milestone Universe heroes."
+          ],
+          "stats": {
+            "intelligence": 80,
+            "strength": 60,
+            "speed": 75,
+            "durability": 70,
+            "power": 88,
+            "combat": 75
+          },
+          "image": "/media/dc/heroes/StaticShock.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Static_(character)",
+          "sourceTitle": "Static (character)",
+          "sourceDescription": "Static in DC Universe"
+        },
+        {
+          "id": "BlackLightning",
+          "name": "Black Lightning",
+          "alias": "Jefferson Pierce",
+          "universe": "dc",
+          "faction": "heroes",
+          "summary": "An Olympic decathlete and dedicated high-school principal in Suicide Slum, Jefferson Pierce possesses internal bio-electrical generation. As Black Lightning, he channels electrical force fields, lightning blasts, and righteous defense of marginalized communities.",
+          "alignment": "Heroic",
+          "status": "Active Educator & Hero",
+          "debut": null,
+          "fullName": "Jefferson Michael Pierce",
+          "occupation": "Crime Fighter, High School teacher, Former gold-medal-winning Olympic Decathlete, formerly Secretary of Education under Presidents Pete Ross and Lex Luthor.",
+          "placeOfBirth": "-",
+          "publisher": "DC Comics",
+          "firstAppearance": "Black Lightning #1 (April, 1977)",
+          "affiliations": [
+            "Justice League",
+            "Outsiders",
+            "Batman's Strike Force"
+          ],
+          "abilities": [
+            "Bio-Electric Energy Blasts",
+            "Electromagnetic Force Fields",
+            "Olympic Decathlon Athletics & Hand-to-Hand",
+            "Supercharged Reaction Speeds",
+            "Electrical Absorption",
+            "Community Leadership"
+          ],
+          "keyMoments": [
+            "Cleaned up Suicide Slum and opposed the corrupt 100 criminal syndicate.",
+            "Founding cornerstone member of Batman's covert Outsiders team.",
+            "Appointed US Secretary of Education under the Luthor administration."
+          ],
+          "stats": {
+            "intelligence": 78,
+            "strength": 68,
+            "speed": 75,
+            "durability": 75,
+            "power": 88,
+            "combat": 85
+          },
+          "image": "/media/dc/heroes/BlackLightning.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Black_Lightning",
+          "sourceTitle": "Black Lightning",
+          "sourceDescription": "Black Lightning in DC Universe"
+        },
+        {
+          "id": "Atom",
+          "name": "Atom",
+          "alias": "Ray Palmer",
+          "universe": "dc",
+          "faction": "heroes",
+          "summary": "A physicist who harnessed white dwarf star matter in a compression belt, Dr. Ray Palmer can shrink down to subatomic levels while retaining or multiplying his full human mass and punching power.",
+          "alignment": "Heroic",
+          "status": "Subatomic Explorer",
+          "debut": null,
+          "fullName": "Raymond Palmer",
+          "occupation": "Physics Professor",
+          "placeOfBirth": "-",
+          "publisher": "DC Comics",
+          "firstAppearance": "Showcase #34 (October, 1961)",
+          "affiliations": [
+            "Justice League",
+            "Suicide Squad (briefly)",
+            "Indigo Tribe"
+          ],
+          "abilities": [
+            "Subatomic Size Alteration via White Dwarf Star",
+            "Mass & Weight Distribution Control",
+            "Travel through Phone Lines & Neural Synapses",
+            "Genius Nuclear & Quantum Physics",
+            "Microscopic Reconnaissance",
+            "Superhuman Density Strikes"
+          ],
+          "keyMoments": [
+            "Discovered white dwarf star lens compression and saved Ivy Town.",
+            "Traveled into the brains and bloodstreams of fallen heroes to perform miracle surgeries.",
+            "Traveled the Bleed across 52 multiversal realities in search of Ray Palmer."
+          ],
+          "stats": {
+            "intelligence": 92,
+            "strength": 75,
+            "speed": 70,
+            "durability": 72,
+            "power": 80,
+            "combat": 75
+          },
+          "image": "/media/dc/heroes/Atom.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Atom_(Ray_Palmer)",
+          "sourceTitle": "Atom (Ray Palmer)",
+          "sourceDescription": "Atom in DC Universe"
+        },
+        {
+          "id": "PlasticMan",
+          "name": "Plastic Man",
+          "alias": "Patrick 'Eel' O'Brian",
+          "universe": "dc",
+          "faction": "heroes",
+          "summary": "Doused in an unknown chemical compound during a botched chemical plant heist, small-time crook Eel O'Brian was saved by monks and reformed into Plastic Man. Virtually indestructible, he can morph into anything from rubber gliders to giant bouncy balls.",
+          "alignment": "Heroic",
+          "status": "Indestructible Shapeshifter",
+          "debut": null,
+          "fullName": "Patrick O'Brian",
+          "occupation": "Government Agent",
+          "placeOfBirth": "-",
+          "publisher": "DC Comics",
+          "firstAppearance": "Police Comics #1 (August, 1941)",
+          "affiliations": [
+            "Justice League",
+            "All-Star Squadron",
+            "Terrifics"
+          ],
+          "abilities": [
+            "Total Molecular Elasticity & Shape-Shifting",
+            "Immunity to Physical Concussion & Bullets",
+            "Density Manipulation & Camouflage",
+            "Nigh-Immortality & Regeneration",
+            "Hilarious Disorientation Tactics",
+            "Superhuman Reflexes"
+          ],
+          "keyMoments": [
+            "Reformed from street hoodlum to one of the most beloved Justice League defenders.",
+            "Held off Martian invaders and the Burning Martian Fernus single-handedly.",
+            "Reassembled his scattered molecules after spending 3,000 years under the ocean."
+          ],
+          "stats": {
+            "intelligence": 72,
+            "strength": 80,
+            "speed": 70,
+            "durability": 100,
+            "power": 88,
+            "combat": 80
+          },
+          "image": "/media/dc/heroes/PlasticMan.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Plastic_Man",
+          "sourceTitle": "Plastic Man",
+          "sourceDescription": "Plastic Man in DC Universe"
+        },
+        {
+          "id": "Steel",
+          "name": "Steel",
+          "alias": "John Henry Irons",
+          "universe": "dc",
+          "faction": "heroes",
+          "summary": "Inspired by Superman's sacrifice against Doomsday, weapons engineer John Henry Irons forged a suit of powered armor and an energy-charged sledgehammer to uphold the Man of Steel's legacy in Metropolis.",
+          "alignment": "Heroic",
+          "status": "Metropolis High-Tech Guardian",
+          "debut": null,
+          "fullName": "John Henry Irons",
+          "occupation": "Weapons designer, former steelworker",
+          "placeOfBirth": "Washington, D.C.",
+          "publisher": "DC Comics",
+          "firstAppearance": "The Adventures of Superman #500 (June, 1993)",
+          "affiliations": [
+            "Justice League",
+            "Team Superman",
+            "Suicide Squad"
+          ],
+          "abilities": [
+            "Advanced Powered Exo-Armor",
+            "Kinetic Energy Sledgehammer",
+            "Genius Ballistics & Metallurgy Engineering",
+            "Wrist-Mounted Rivet Guns",
+            "Jet Boot Flight",
+            "Tactical Combatant"
+          ],
+          "keyMoments": [
+            "Stepped forward as the Man of Steel in Metropolis following Superman's death.",
+            "Shut down illegal Toastmaster weapon distribution in the streets.",
+            "Designed the Justice League Watchtower teleportation and defense systems."
+          ],
+          "stats": {
+            "intelligence": 88,
+            "strength": 85,
+            "speed": 70,
+            "durability": 88,
+            "power": 80,
+            "combat": 82
+          },
+          "image": "/media/dc/heroes/Steel.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Steel_(John_Henry_Irons)",
+          "sourceTitle": "Steel (John Henry Irons)",
+          "sourceDescription": "Steel in DC Universe"
+        },
+        {
+          "id": "Katana",
+          "name": "Katana",
+          "alias": "Tatsu Yamashiro",
+          "universe": "dc",
+          "faction": "heroes",
+          "summary": "Following the murder of her husband by the Yakuza, Tatsu Yamashiro took possession of the mystical Soultaker sword, which traps the souls of its victims. She is a peerless martial artist and loyal Outsiders commander.",
+          "alignment": "Heroic",
+          "status": "Active Outsider Swordsman",
+          "debut": null,
+          "fullName": "Tatsu Yamashiro",
+          "occupation": "Adventurer / Defender",
+          "placeOfBirth": "-",
+          "publisher": "DC Comics",
+          "firstAppearance": "The Brave and the Bold #200 (July, 1983)",
+          "affiliations": [
+            "Outsiders",
+            "Birds of Prey",
+            "Suicide Squad",
+            "Justice League of America"
+          ],
+          "abilities": [
+            "Wields the Soultaker Mystical Blade",
+            "Communes with Trapped Souls",
+            "Master of Kenjutsu & Iaido",
+            "Master Martial Artist & Acrobat",
+            "Stealth & Infiltration",
+            "Unshakable Bushido Honor"
+          ],
+          "keyMoments": [
+            "Took vengeance against Takeo and mastered the Soultaker sword.",
+            "Co-founded Batman's Outsiders, anchoring their frontline melee operations.",
+            "Served on Amanda Waller's Suicide Squad as Waller's personal enforcer."
+          ],
+          "stats": {
+            "intelligence": 75,
+            "strength": 65,
+            "speed": 78,
+            "durability": 70,
+            "power": 75,
+            "combat": 95
+          },
+          "image": "/media/dc/heroes/Katana.svg",
+          "imageSource": "placeholder",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Katana_(comics)",
+          "sourceTitle": "Katana (comics)",
+          "sourceDescription": "Katana in DC Universe"
         }
       ],
       "villains": [
@@ -8088,6 +9940,285 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Parallax_(character)",
           "sourceTitle": "Parallax (character)",
           "sourceDescription": "DC universe character"
+        },
+        {
+          "id": "SolomonGrundy",
+          "name": "Solomon Grundy",
+          "alias": "Born on a Monday / Cyrus Gold",
+          "universe": "dc",
+          "faction": "villains",
+          "summary": "Murdered in Slaughter Swamp in the late 19th century, Cyrus Gold was resurrected decades later as an unkillable, plant-matter zombie brute. Each time Grundy dies, he returns with altered intellect and monstrous strength.",
+          "alignment": "Villainous",
+          "status": "Immortal Slaughter Swamp Zombie",
+          "debut": null,
+          "fullName": "Cyrus Gold",
+          "occupation": "-",
+          "placeOfBirth": "Gotham City",
+          "publisher": "DC Comics",
+          "firstAppearance": "All-American Comics #61 (October, 1944)",
+          "affiliations": [
+            "Injustice Society",
+            "Legion of Doom",
+            "Secret Society of Super Villains"
+          ],
+          "abilities": [
+            "Immortal Resurrection Cycle",
+            "Colossal Superhuman Strength",
+            "Bulletproof Plant-Decay Flesh",
+            "Immunity to Pain & Fatigue",
+            "Crushing Brutality",
+            "Spiritual Invulnerability"
+          ],
+          "keyMoments": [
+            "Challenged the Golden Age Green Lantern Alan Scott using wood-infused invulnerability.",
+            "Tore through the Justice League in multiple resurrected forms.",
+            "Stood as the muscle of the Legion of Doom against Superman and Batman."
+          ],
+          "stats": {
+            "intelligence": 45,
+            "strength": 95,
+            "speed": 50,
+            "durability": 98,
+            "power": 85,
+            "combat": 78
+          },
+          "image": "/media/dc/villains/SolomonGrundy.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Solomon_Grundy_(character)",
+          "sourceTitle": "Solomon Grundy (character)",
+          "sourceDescription": "Solomon Grundy in DC Universe"
+        },
+        {
+          "id": "Clayface",
+          "name": "Clayface",
+          "alias": "Basil Karlo",
+          "universe": "dc",
+          "faction": "villains",
+          "summary": "Once a B-movie actor driven mad by his role being recast, Basil Karlo injected himself with the DNA of other shapeshifting specimens, turning into a massive living mass of clay capable of copying anyone's appearance, voice, and weapons.",
+          "alignment": "Villainous",
+          "status": "Shapeshifting Gotham Menace",
+          "debut": null,
+          "fullName": "Basil Karlo",
+          "occupation": "Criminal Strategist",
+          "placeOfBirth": "-",
+          "publisher": "DC Comics",
+          "firstAppearance": "Detective Comics #40 (June, 1940)",
+          "affiliations": [
+            "Mud Pack",
+            "Secret Society of Super Villains",
+            "Batman Family (briefly)"
+          ],
+          "abilities": [
+            "Complete Clay Biomass Shape-Shifting",
+            "Flawless Voice & Identity Replication",
+            "Hardened Clay Hammers & Spikes",
+            "Density & Liquid Absorption",
+            "Immunity to Physical Concussion",
+            "Acrobatic Theatricality"
+          ],
+          "keyMoments": [
+            "United the Mud Pack to terrorize Gotham City and destroy Batman.",
+            "Infiltrated Arkham Asylum by impersonating doctors, guards, and patients.",
+            "Reformed temporarily in Detective Comics under Batman and Batwoman's guidance."
+          ],
+          "stats": {
+            "intelligence": 68,
+            "strength": 85,
+            "speed": 60,
+            "durability": 92,
+            "power": 80,
+            "combat": 75
+          },
+          "image": "/media/dc/villains/Clayface.svg",
+          "imageSource": "placeholder",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Clayface",
+          "sourceTitle": "Clayface",
+          "sourceDescription": "Clayface in DC Universe"
+        },
+        {
+          "id": "KillerCroc",
+          "name": "Killer Croc",
+          "alias": "Waylon Jones",
+          "universe": "dc",
+          "faction": "villains",
+          "summary": "Born with an extreme form of epidermolytic hyperkeratosis, Waylon Jones developed reptilian scales, razor claws, and monstrous jaw strength. Exiled to the Gotham sewers, he became a ruthless underworld enforcer and cannibalistic terror.",
+          "alignment": "Villainous",
+          "status": "Gotham Sewer Warlord",
+          "debut": null,
+          "fullName": "Waylon Jones",
+          "occupation": "-",
+          "placeOfBirth": "-",
+          "publisher": "DC Comics",
+          "firstAppearance": "Batman #357 (March, 1983)",
+          "affiliations": [
+            "Suicide Squad",
+            "Secret Society of Super Villains"
+          ],
+          "abilities": [
+            "Armored Reptilian Scales",
+            "Superhuman Strength & Razor Claws",
+            "Underwater Swimming & Extended Breath-Holding",
+            "Enhanced Scent & Night Vision",
+            "Carnivorous Jaw Biting Force",
+            "Subterranean Sewer Guerrilla Combat"
+          ],
+          "keyMoments": [
+            "Killed Jason Todd's circus acrobat parents in pre-Crisis Gotham continuity.",
+            "Ruled the flooded sewer underbelly of Gotham during No Man's Land.",
+            "Served on Amanda Waller's Suicide Squad, defending Task Force X underwater."
+          ],
+          "stats": {
+            "intelligence": 55,
+            "strength": 82,
+            "speed": 62,
+            "durability": 85,
+            "power": 65,
+            "combat": 80
+          },
+          "image": "/media/dc/villains/KillerCroc.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Killer_Croc",
+          "sourceTitle": "Killer Croc",
+          "sourceDescription": "Killer Croc in DC Universe"
+        },
+        {
+          "id": "AntiMonitor",
+          "name": "Anti-Monitor",
+          "alias": "Mobius / Ruler of the Antimatter Universe",
+          "universe": "dc",
+          "faction": "villains",
+          "summary": "The cosmic opposite of the Monitor, the Anti-Monitor rules the Antimatter Universe. Driven to consume all positive-matter realities with antimatter waves, he destroyed thousands of parallel universes in the landmark Crisis on Infinite Earths.",
+          "alignment": "Villainous",
+          "status": "Cosmic Multiverse Destroyer",
+          "debut": null,
+          "fullName": "Mobius",
+          "occupation": "-",
+          "placeOfBirth": "Moon of Qward",
+          "publisher": "DC Comics",
+          "firstAppearance": "Crisis on Infinite Earths #2 (May, 1985)",
+          "affiliations": [
+            "Sinestro Corps",
+            "Black Lantern Corps (Battery)"
+          ],
+          "abilities": [
+            "Antimatter Universe Manipulation",
+            "Universal Energy Absorption",
+            "Destruction of Entire Timelines & Earths",
+            "Cosmic Armor & Reality Warping",
+            "Unstoppable Divine Size & Might",
+            "Antimatter Projection"
+          ],
+          "keyMoments": [
+            "Wiped out infinite parallel Earths in Crisis on Infinite Earths.",
+            "Slaughtered Supergirl and the Flash (Barry Allen) in high-stakes cosmic combat.",
+            "Served as the Sinestro Corps' ultimate guardian and Central Battery in Blackest Night."
+          ],
+          "stats": {
+            "intelligence": 95,
+            "strength": 100,
+            "speed": 90,
+            "durability": 100,
+            "power": 100,
+            "combat": 90
+          },
+          "image": "/media/dc/villains/AntiMonitor.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Anti-Monitor",
+          "sourceTitle": "Anti-Monitor",
+          "sourceDescription": "Anti-Monitor in DC Universe"
+        },
+        {
+          "id": "SuperboyPrime",
+          "name": "Superboy-Prime",
+          "alias": "Clark Kent of Earth-Prime",
+          "universe": "dc",
+          "faction": "villains",
+          "summary": "Hailing from Earth-Prime where superheroes only existed in comic books, Clark Kent gained Silver-Age Kryptonian powers just before his universe was erased. Driven mad by loneliness and obsession with a 'perfect' universe, he shattered reality itself with punches.",
+          "alignment": "Villainous",
+          "status": "Multiversal Threat",
+          "debut": null,
+          "fullName": "Clark Kent",
+          "occupation": "-",
+          "placeOfBirth": "Krypton (Earth-Prime)",
+          "publisher": "DC Comics",
+          "firstAppearance": "DC Comics Presents #87 (November, 1985)",
+          "affiliations": [
+            "Sinestro Corps",
+            "Legion of Doom",
+            "Injustice League"
+          ],
+          "abilities": [
+            "Pre-Crisis Silver-Age Kryptonian Power",
+            "Reality-Punching Dimensional Shattering",
+            "Immunity to Magic & Kryptonite from Other Earths",
+            "Hypersonic Interstellar Flight",
+            "Solar Armor Energy Channeling",
+            "Uncontrollable Rage"
+          ],
+          "keyMoments": [
+            "Helped defeat the Anti-Monitor before retreating to a paradisiacal pocket dimension.",
+            "Shattered the walls of reality with his bare fists, causing the Infinite Crisis.",
+            "Slaughtered dozens of Green Lanterns and decimated the Teen Titans."
+          ],
+          "stats": {
+            "intelligence": 75,
+            "strength": 100,
+            "speed": 100,
+            "durability": 100,
+            "power": 100,
+            "combat": 85
+          },
+          "image": "/media/dc/villains/SuperboyPrime.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Superboy-Prime",
+          "sourceTitle": "Superboy-Prime",
+          "sourceDescription": "Superboy-Prime in DC Universe"
+        },
+        {
+          "id": "Atrocitus",
+          "name": "Atrocitus",
+          "alias": "Lord of the Red Lantern Corps",
+          "universe": "dc",
+          "faction": "villains",
+          "summary": "Sole survivor of the Manhunters' sector 666 massacre, Atrocitus forged the Red Lantern Central Battery using blood magic and the emotional spectrum of pure rage. Red Lanterns vomit napalm-like plasma blood that incinerates all in its path.",
+          "alignment": "Villainous",
+          "status": "Red Lantern Sovereign",
+          "debut": null,
+          "fullName": "Atros",
+          "occupation": "Criminal Strategist",
+          "placeOfBirth": "-",
+          "publisher": "DC Comics",
+          "firstAppearance": "Green Lantern #25 (December, 2007)",
+          "affiliations": [
+            "Red Lantern Corps",
+            "Five Inversions"
+          ],
+          "abilities": [
+            "Red Power Ring of Pure Rage",
+            "Napalm Acid Blood Vomit",
+            "Blood Divination & Prophecy",
+            "Superhuman Alien Strength",
+            "Construct Creation via Burning Hate",
+            "Rage Induction"
+          ],
+          "keyMoments": [
+            "Survived the slaughter of Sector 666 and swore vengeance on the Guardians of Oa.",
+            "Forged the Red Lantern Corps battery on the blood plains of Ysmault.",
+            "Invaded Earth and clashed with Hal Jordan and Sinestro during Blackest Night."
+          ],
+          "stats": {
+            "intelligence": 82,
+            "strength": 92,
+            "speed": 75,
+            "durability": 90,
+            "power": 98,
+            "combat": 90
+          },
+          "image": "/media/dc/villains/Atrocitus.svg",
+          "imageSource": "placeholder",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Atrocitus",
+          "sourceTitle": "Atrocitus",
+          "sourceDescription": "Atrocitus in DC Universe"
         }
       ],
       "antiheroes": [
@@ -8816,6 +10947,195 @@
           "sourceUrl": "https://en.wikipedia.org/wiki/Rorschach_(character)",
           "sourceTitle": "Rorschach (character)",
           "sourceDescription": "Comic book antihero"
+        },
+        {
+          "id": "Etrigan",
+          "name": "Etrigan the Demon",
+          "alias": "The Demon / Jason Blood",
+          "universe": "dc",
+          "faction": "antiheroes",
+          "summary": "Bound to Arthurian knight Jason Blood by the wizard Merlin, the rhyming demon Etrigan fights evil when summoned through the immortal incantation: 'Gone, gone the form of man, rise the demon Etrigan!'",
+          "alignment": "Chaotic / Neutral",
+          "status": "Immortal Rhyming Demon",
+          "debut": null,
+          "fullName": "Etrigan / Jason Blood",
+          "occupation": "-",
+          "placeOfBirth": "Hell",
+          "publisher": "DC Comics",
+          "firstAppearance": "The Demon #1 (August, 1972)",
+          "affiliations": [
+            "Justice League Dark",
+            "Demon Knights",
+            "Shadowpact"
+          ],
+          "abilities": [
+            "Hellfire Breath & Mystical Flame",
+            "Superhuman Demonic Strength",
+            "Rhyming Sorcery & Magic Resistance",
+            "Claws & Fangs",
+            "Immortal Regeneration",
+            "Jason Blood's Occult Lore"
+          ],
+          "keyMoments": [
+            "Bound to Jason Blood in Camelot following the fall of King Arthur.",
+            "Stood as the mystical bruiser of Justice League Dark against elder horrors.",
+            "Fought across centuries from medieval battlefields to modern Gotham."
+          ],
+          "stats": {
+            "intelligence": 80,
+            "strength": 90,
+            "speed": 72,
+            "durability": 95,
+            "power": 92,
+            "combat": 88
+          },
+          "image": "/media/dc/antiheroes/Etrigan.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Etrigan_the_Demon",
+          "sourceTitle": "Etrigan the Demon",
+          "sourceDescription": "Etrigan the Demon in DC Universe"
+        },
+        {
+          "id": "JonahHex",
+          "name": "Jonah Hex",
+          "alias": "The Scared Bounty Hunter",
+          "universe": "dc",
+          "faction": "antiheroes",
+          "summary": "A scarred Civil War veteran and bounty hunter of the American Old West, Jonah Hex lives by a strict personal code to protect the innocent. Unmatched with a revolver, he has also traveled through time to fight modern threats.",
+          "alignment": "Chaotic / Neutral",
+          "status": "Old West Legend",
+          "debut": null,
+          "fullName": "Jonah Woodson Hex",
+          "occupation": "Criminal Strategist",
+          "placeOfBirth": "-",
+          "publisher": "DC Comics",
+          "firstAppearance": "All-Star Western #10 (February, 1972)",
+          "affiliations": [
+            "Rough Bunch",
+            "Justice League (temporary ally)"
+          ],
+          "abilities": [
+            "Fastest Draw in the American West",
+            "Superhuman Marksman with Revolvers & Rifles",
+            "Master Knife & Hand-to-Hand Combatant",
+            "Ironclad Personal Honor Code",
+            "Extreme Survival & Tracking",
+            "Pain Tolerance"
+          ],
+          "keyMoments": [
+            "Earned his horrific 'mark of the demon' scar from the Apache tribe.",
+            "Brought down hundreds of corrupt warlords and outlaws across the frontier.",
+            "Traveled to post-apocalyptic future and modern Gotham, fighting Batman."
+          ],
+          "stats": {
+            "intelligence": 72,
+            "strength": 60,
+            "speed": 75,
+            "durability": 75,
+            "power": 40,
+            "combat": 90
+          },
+          "image": "/media/dc/antiheroes/JonahHex.svg",
+          "imageSource": "placeholder",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Jonah_Hex",
+          "sourceTitle": "Jonah Hex",
+          "sourceDescription": "Jonah Hex in DC Universe"
+        },
+        {
+          "id": "KillerFrost",
+          "name": "Killer Frost",
+          "alias": "Caitlin Snow",
+          "universe": "dc",
+          "faction": "antiheroes",
+          "summary": "A STAR Labs scientist who gained heat-vampirism powers following an Arctic lab sabotaged incident, Caitlin Snow must absorb warmth to survive, projecting freezing cold in return. She reformed into a key member of the Justice League of America.",
+          "alignment": "Chaotic / Neutral",
+          "status": "Reformed Justice League Member",
+          "debut": null,
+          "fullName": "Dr. Caitlin Snow",
+          "occupation": "Scientist",
+          "placeOfBirth": "-",
+          "publisher": "DC Comics",
+          "firstAppearance": "Fury of Firestorm: The Nuclear Man #19 (June, 2013)",
+          "affiliations": [
+            "Justice League of America",
+            "Suicide Squad",
+            "STAR Labs"
+          ],
+          "abilities": [
+            "Thermal Energy Absorption",
+            "Cryokinetic Ice Projections & Spikes",
+            "Sub-Zero Temperature Fields",
+            "Ice Armor & Slides",
+            "Genius Physics & Engineering",
+            "Heat-Seeking Senses"
+          ],
+          "keyMoments": [
+            "Transformed by a thermodynamic engine accident into a heat-craving metahuman.",
+            "Served on the Suicide Squad and helped save Earth from Eclipso.",
+            "Invited by Batman to join the Justice League of America as an agent of redemption."
+          ],
+          "stats": {
+            "intelligence": 85,
+            "strength": 65,
+            "speed": 65,
+            "durability": 75,
+            "power": 88,
+            "combat": 72
+          },
+          "image": "/media/dc/antiheroes/KillerFrost.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Killer_Frost",
+          "sourceTitle": "Killer Frost",
+          "sourceDescription": "Killer Frost in DC Universe"
+        },
+        {
+          "id": "Arsenal",
+          "name": "Arsenal",
+          "alias": "Roy Harper / Speedy / Red Arrow",
+          "universe": "dc",
+          "faction": "antiheroes",
+          "summary": "Green Arrow's former ward Speedy, Roy Harper outgrew his mentor's shadow through grit, overcoming addiction, and mastering every weapon known to humankind. Operating as Arsenal, he fights alongside Jason Todd in the Outlaws.",
+          "alignment": "Chaotic / Neutral",
+          "status": "Outlaw Marksman",
+          "debut": null,
+          "fullName": "Roy William Harper Jr.",
+          "occupation": "Adventurer; intelligence agent; musician",
+          "placeOfBirth": "-",
+          "publisher": "DC Comics",
+          "firstAppearance": "More Fun Comics #73 (November, 1941)",
+          "affiliations": [
+            "Outlaws",
+            "Titans",
+            "Teen Titans",
+            "Justice League",
+            "Checkmate"
+          ],
+          "abilities": [
+            "Master Marksman with Bow & Firearms",
+            "Lethal Weapon Improvisation",
+            "Master Martial Artist",
+            "Cybernetic Arm Enhancements",
+            "Tactical Infiltration",
+            "Street-Smart Resilience"
+          ],
+          "keyMoments": [
+            "Overcame addiction and established his own independent identity as Arsenal.",
+            "Graduated to the Justice League of America as Red Arrow.",
+            "Formed an unbreakable brotherhood with Red Hood in the Outlaws."
+          ],
+          "stats": {
+            "intelligence": 75,
+            "strength": 65,
+            "speed": 74,
+            "durability": 70,
+            "power": 65,
+            "combat": 88
+          },
+          "image": "/media/dc/antiheroes/Arsenal.jpg",
+          "imageSource": "superhero-api",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Roy_Harper_(character)",
+          "sourceTitle": "Roy Harper (character)",
+          "sourceDescription": "Arsenal in DC Universe"
         }
       ]
     }
